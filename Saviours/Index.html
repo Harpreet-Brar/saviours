@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>SAVIOURS</title>
+    <script src="js/Chart.js"></script>
+</head>
+<body>
+    <header class="header" style="text-align:center">
+        <a href="index.html"><img width="100" alt="Logo" src="images/logo.png"></a>
+        <div class="navbar">
+  <a href="pages/donate.html">Appointment</a>
+  <div class="donate">
+    <button class="dropbtn">Donate
+    <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown">
+      <a href="pages/learn.html">Process Of Donation</a>
+      <a href="pages/eligible.html">Eligible to donate?</a>
+    </div>
+  </div>
+<a href="pages/about.html">About us</a>
+  <a href="pages/login.html"><button type="button" name="button">Login</button></a>
+</div>
+
+      </header>
+
+
+
+          <div class="slideshow-container">
+
+
+
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="images/banner2.png">
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="images/banner3.png">
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="images/banner2.png">
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+          </div>
+          <br>
+
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+
+<main class="index">
+
+
+        <div class="services">
+            <span>
+                <img src="images/feature3.jpg">
+                <p>why to help?</p>
+            </span>
+            <span>
+                <img src="images/feature2.jpg">
+                <p>how to book?</p>
+            </span>
+            <span>
+                <img src="images/feature1.jpg">
+                <p>support</p>
+            </span>
+        </div>
+
+
+
+                <div class="slider">
+        <canvas id="myChart" width="300" height="100"></canvas>
+        <script>
+
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+        }
+
+
+
+
+        /*=================================================================================================*/
+        var ctx = document.getElementById('myChart').getContext('2d');
+  var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'line',
+
+      // The data for our dataset
+      data: {
+          labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+          datasets: [{
+              label: 'Blood Group',
+              borderColor: 'rgb(255, 99, 132)',
+
+          },
+          {
+              label: 'A+',
+              borderColor: 'rgb(244,164,96)',
+              data: [0,7,14,18,21,24,30],
+
+          },
+          {
+              label: 'AB+',
+              borderColor: 'rgb(255, 99, 132)',
+              data: [0,9,17,21,27,38,41],
+
+          },
+          {
+              label: 'B+',
+              borderColor: 'rgb(218,165,32)',
+              data: [0,11,19,21,29,40,43],
+
+          },
+          {
+              label: 'AB-',
+              borderColor: 'rgb(199,21,133)',
+              data: [0,12,21,24,31,46,51],
+
+          },
+          {
+              label: 'O+',
+              borderColor: 'rgb(50, 99, 132)',
+              data: [0,9,23,27,34,48,52],
+
+          },
+          {
+              label: 'O-',
+              borderColor: 'rgb(165,42,42)',
+              data: [0,14,25,31,42,52,50],
+
+          }
+      ]
+      },
+
+      // Configuration options go here
+      options: {}
+  });
+        </script>
+
+
+
+    </div>
+        <div class="intro">
+            <h2>Our Services</h2>
+            <hr>
+            <p>
+                Our Website came out with the solution for the donors who wants to donate blood in any particular area so that it would be easy for the hospitals to locate to that person whenever needed. Also, the solution is to locate the donor directly by looking at their blood groups. The user can interact by searching the required blood group with nearby locations of donors.
+        </p>
+        <a href="pages/login.html"><button type="button" name="button">Book Now</button></a>
+
+        </div>
+      </main>
+      <footer>
+
+      </footer>
+       <script src="js/main.js" charset="utf-8"></script>
+</body>
+</html>
