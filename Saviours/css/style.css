@@ -1,10 +1,11 @@
 
 
 * {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 body {
-    font-family: Verdana, sans-serif; margin:0
+    font-family: Verdana, sans-serif; margin:0;
+    background-color:#daecf3;
 }
 .mySlides {display: none}
 .slideshow-container img {
@@ -27,12 +28,9 @@ header img{
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 100%S;
+  max-width: 100%;
   position: relative;
   margin: 0;
-  border: 2px solid lightblue;
-  margin-left: 3rem;
-  margin-right: 3rem;
 
 }
 
@@ -127,37 +125,57 @@ button{
 
 
 /*=============================================header===============================*/
+#logo,.header #logolink{
+    width: 150px;
+    height: 120px;
+    display: block;
+}
 .header{
-    background-color: #003333;
+    background-color: #022d41;
     color: white;
     display: grid;
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: .5fr 1fr;
     align-items: center;
     justify-content: center;
-    height: 3rem;
+    height: 60px;
     align-content: center;
-    padding: 1rem;
+    padding: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
     position: sticky;
     top: 0;
     z-index: 99;
   }
   .navbar button{
-    background-color: transparent;
-    border: 1px solid white;
+    background-color: #fe424d;
+    border: none;
     color: white;
     border-radius: 25px;
     padding: .5rem;
-    width: 9rem;
+    width: 7rem;
   }
   .navbar {
     overflow: hidden;
-    background-color: #003333;
+    background-color: #022d41;
     width: auto;
-    height: inherit;
+    height: 60px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-content: center;
+    grid-template-columns: 130px 130px 130px 130px;
+    justify-content: flex-end;
     align-items: center;
+  }
+  .navbar a:hover{
+      background-color: #004444;
+      width: 100%;
+      height: 40px;
+      text-align: center;
+  }
+.navbar a{
+    display: grid;
+    align-items: center;
+}
+  #bar{
+      display: none;
   }
   .donate {
     overflow: hidden;
@@ -175,12 +193,11 @@ button{
 
   .dropdown{
     display: none;
-    background-color: #003333;
+    background-color: #022d41;
     min-width: 160px;
     position: fixed;
-    top: 3rem;
+    top: 3.5rem;
     z-index: 1;
-    padding: .5rem;
   }
 
   .dropdown a{
@@ -188,7 +205,7 @@ button{
     padding: 12px 16px;
     margin-right: 1rem;
     text-decoration: none;
-    background-color: #003333;
+    background-color: #022d41;
     display: block;
     text-align: left;
   }
@@ -202,31 +219,72 @@ button{
   flex-flow: column nowrap;
   }
 
+@media screen and (max-width:800px){
+    .header{
+        display: grid;
+        grid-template-columns: 1fr .15fr;
+        padding: 0.5rem;
+    }
+    #bar,#close{
+        display: block;
+        background-color: inherit;
+        color: white;
+        border: none;
+        padding: 0;
+        font-size: 24px;
+    }
+
+    .navbar{
+        display: none;
+    }
+
+    body.show-menu .navbar{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 50px 50px 50px;
+        justify-items: center;
+        height: 200px;
+        width: 100%;
+        position: absolute;
+        top: 3.5rem;
+        right: 0;
+
+        padding-right: 1rem;
+    }
+    .dropdown{
+        top: 7rem;
+        right: 0;
+    }
+}
+
+}
 
 
   /*=============================================Login page===============================*/
   .login{
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 2fr 1fr;
   }
-  .login div:first-child{
+  .login #dashboard{
     background-color: lightgray;
   }
   .login-box{
     display: flex;
     flex-flow: column;
     justify-content: center;
+    justify-items: center;
     align-items: center;
     height: 90vh;
     background-color: white;
   }
   .login input{
     background-color: transparent;
-    border: 1px solid black;
+    border: .15rem solid black;
     border-radius: 25px;
     height: 2rem;
     margin: 1rem;
     padding: 1rem;
+    outline: inherit;
   }
   .login .login-box button{
     width: 200px;
@@ -234,15 +292,17 @@ button{
     border-radius: 25px;
     border: 1px solid transparent;
   }
-  .login-box span{
+  .login-box #userimg{
     width: 7rem;
     height: 7rem;
     border: 1px solid black;
     border-radius: 50%;
 
   }
-  .login a{
-      color: black;
+  .login .signup a{
+    text-decoration: none;
+    color: rgb(10,73,88);
+    font-weight: bolder;
   }
 
   @media screen and (max-width:600px){
@@ -254,11 +314,64 @@ button{
         display: none;
     }
   }
+
+
+  .login-box .check-box{
+      display: grid;
+      grid-template-columns: .1fr .5fr;
+      justify-content: center;
+      font-size:.5rem;
+      color: rgb(66,33,11);
+      font-weight: bolder;
+      align-items: center;
+      justify-items: center;
+      margin: 0;
+      padding: 0;
+  }
+  .login-box .check-box input{
+      background: transparent;
+      border: 1px solid rgb(10,73,88);
+      width: max-content;
+      margin: 0;
+      padding: 0;
+      height: auto;
+  }
+
+  .psw{
+      margin-bottom: 3rem;
+      font-size: .5rem;
+      color: rgb(66,33,11);
+      margin: 0;
+      padding: 0;
+  }
+  .psw a{
+      text-decoration: none;
+      color: rgb(10,73,88);
+      font-weight: bolder;
+  }
+  .inline{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      text-align: center;
+      width: 20rem;
+      align-items: center;
+      height: 40px;
+  }
+
+  .login-box .signup{
+      font-size: .5rem;
+      margin: .5rem;
+      width: 10rem;
+      display: grid;
+      justify-content: center;
+      justify-items: center;
+  }
+
 /*=======================================SIGN UP ==============================*/
 
 .signup{
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 2fr 1fr;
 }
 .signup div:first-child{
   background-color: lightgray;
@@ -296,6 +409,12 @@ button{
     color: black;
 }
 
+#gotologin{
+    background-color: transparent;
+    border: none;
+    color: blue;
+}
+
 @media screen and (max-width:600px){
   .signup{
       display: grid;
@@ -313,9 +432,9 @@ button{
     padding-right: 5rem;
 }
 .slider{
-    width: 300;
-    height: 100;
-    background-color: lightgray;
+    width: 100%;
+    height: 120;
+    background-color: #daecf3;
 }
 .services{
     display: grid;
@@ -328,7 +447,6 @@ button{
 .services span img{
     width: 150px;
     height: 150px;
-    background-color: lightgray;
     border-radius: 50%;
     margin: 0;
     padding: 0;
@@ -339,6 +457,7 @@ button{
     width: 150px;
     height: 150px;
     background-color: rgba(255,100,10,0.8);
+    color: white;
     position: absolute;
     top: 0;
     left: 0;
@@ -351,8 +470,6 @@ button{
 .services span{
     width: 150px;
     height: 150px;
-    background-color: lightgray;
-    border: 1px solid rgba(255,100,10,0.8);
     overflow: hidden;
     border-radius: 50%;
     padding: 0;
@@ -442,9 +559,9 @@ hr{
 .bar1{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    width: 2rem;
+    width: 2.5rem;
     height: 70vh;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 25px;
     margin-top: 25%;
     padding: 0;
@@ -452,7 +569,7 @@ hr{
 .bar2{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    width: 2rem;
+    width: 2.5rem;
     height: 70vh;
     border: 1px solid black;
     border-radius: 25px;
@@ -462,7 +579,7 @@ hr{
 .bar3{
     display: grid;
     grid-template-rows: 1fr 1fr .5fr;
-    width: 2rem;
+    width: 2.5rem;
     height: 70vh;
     border: 1px solid black;
     border-radius: 25px;
@@ -472,7 +589,7 @@ hr{
 .bar4{
     display: grid;
     grid-template-rows:1fr .5fr;
-    width: 2rem;
+    width: 2.5rem;
     height: 70vh;
     border: 1px solid black;
     border-radius: 25px;
@@ -482,7 +599,7 @@ hr{
 .bar5{
     display: grid;
     grid-template-rows: 1fr;
-    width: 2rem;
+    width: 2.5rem;
     height: 70vh;
     border: 1px solid black;
     border-radius: 25px;
@@ -493,20 +610,22 @@ hr{
 div.point{
     width: 100%;
     height: 100%;
-    background-color: gray;
+    background-color: hotpink;
     border-radius: 25px;
 }
 
 .loc_search{
       background-color: transparent;
-      border: 1px solid black;
-      color: black;
+      border: 2px solid black;
+      color: white;
       border-radius: 25px;
       padding: .5rem;
-      width: 5rem;
-      height: 2.5rem;
+      width: 150px;
+      height: 45px;
       position: relative;
       margin-bottom: 1rem;
+      background-color: black;
+      font-size: 1.5rem;
 }
 .hide{
     display: none;
@@ -542,20 +661,21 @@ div.point{
 .start{
     display: grid;
     align-items: center;
-    background-color: blue;
+    background-color: orange;
     border-radius: 25px 25px 0 0;
     width: 100%;
     height: 40px;
     text-align: center;
     color: white;
     font-style: italic;
+    margin-bottom: 2rem;
 }
 .start h2{
     padding: 0;
     margin: 0;
 }
 .end{
-    background-color: blue;
+    background-color: orange;
     border-radius: 0 0 25px 25px;
     width: 100%;
     height: 40px;
