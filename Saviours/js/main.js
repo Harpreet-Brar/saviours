@@ -188,14 +188,14 @@ function modify(x){
     if(x.target.className=="fa fa-bars"){
         body.className="";
         body.classList.add("show-menu");
-        document.getElementById("bar").className = "fa fa-close";
-        document.getElementById("bar").id = "close";
+        document.getElementById("menubar").className = "fa fa-close";
+        document.getElementById("menubar").id = "close";
 
     }
 
     if(body.className==""){
         document.getElementById("close").className = "fa fa-bars";
-        document.getElementById("close").id = "bar";
+        document.getElementById("close").id = "menubar";
     }
 }
 
