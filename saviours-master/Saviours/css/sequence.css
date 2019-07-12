@@ -1,0 +1,47 @@
+path {  stroke: #fff; }
+path:hover {  opacity:0.9; }
+rect:hover {  fill:blue; }
+.axis {  font: 10px sans-serif; }
+.legend tr{    border-bottom:1px solid grey; }
+.legend tr:first-child{    border-top:1px solid grey; }
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {  display: none; }
+.legend{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    margin-bottom:76px;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    margin-right: 7rem;
+}
+.legend td{
+    padding:4px 5px;
+    vertical-align:bottom;
+}
+.legendFreq, .legendPerc{
+    align:right;
+    width:50px;
+}
+#dashboard{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+svg:first-child{
+    grid-column: 1/span 2;
+}
+svg:nth-child(2){
+    margin-left: 7rem;
+    margin-right: 0;
+}
