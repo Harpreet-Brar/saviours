@@ -7,86 +7,91 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>SAVIOURS</title>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <title>HELP</title>
 </head>
 <body>
     <header class="header" style="text-align:center">
+        <a href="../index.html" id="logolink"><img id="logo" alt="Logo" src="../images/logo.png"></a>
 
-                        <a href="../index.html"><img width="100" alt="Logo" src="../images/logo.png"></a>
-                        <button type="button" class="fa fa-bars" id="menubar">
-                        </button>
-                        <div class="navbar">
-                  <a href="donate.html">Appointments</a>
-                  <div class="dropbutton">
-                    <button class="dropbtn">Donate
+        <button type="button" class="fa fa-bars" id="menubar"></button>
+
+        <div class="navbar" id="navbar">
+            <a href="donate.html"><span>Appointment</span></a>
+            <div class="dropbutton">
+                <button class="dropbtn">Donate
                     <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown">
-                      <a href="learn.html">Process Of Donation</a>
-                      <a href="eligible.html">Eligible to donate?</a>
-                    </div>
-                  </div>
-            <a href="about.html">About us</a>
-                  <a href="login.html"><button type="button" name="button" id="logout_button">Log Out</button></a>
+                </button>
+                <div class="dropdown">
+                    <a href="learn.html">Process Of Donation</a>
+                    <a href="eligible.html">Eligible to donate ?</a>
                 </div>
-      </header>
-      <main class="learn">
-          <h1>Process Of Donation</h1>
-          <hr>
-          <div class="article">
-
+            </div>
+            <a href="about.html"><span>About us</span></a>
+            <a href="login.html"><button type="button" name="button" id="logout_button">Log out</button></a>
+        </div>
+    </header>
+    <main class="learn">
+      <h1>Process Of Donation</h1>
+      <hr>
+      <div class="article">
           <article>
-
-              In the beginning, You have to fill the
-consent form and register yourself in the
-application by filling the necessary
-information.
-<div class="img">
-
-</div>
+              <p>
+                  In the beginning, You have to fill the
+                  consent form and register yourself in the
+                  application by filling the necessary
+                  information.
+              </p>
+              <img src="../images/bb1.jpg" alt="thubnails" class="img">
           </article>
           <article>
-              <div class="img">
-
-              </div>
-              You can set the reminders in your
-appointments section,so that you can
-get the notification after every three
-months.You can also track your donations
-by maintaining the history in your account.
+              <img src="../images/bb2.jpg" alt="thubnails" class="img">
+              <p>
+                  You can set the reminders in your
+                  appointments section,so that you can
+                  get the notification after every three
+                  months.You can also track your donations
+                  by maintaining the history in your account.
+              </p>
           </article>
           <article>
-              When you reach to the blood bank, they
-will ask you for health exam.They will be
-checking your blood type and the amount
-of blood according to age and size.
-<div class="img">
-
-</div>
+              <p>
+                  When you reach to the blood bank, they
+                  will ask you for health exam.They will be
+                  checking your blood type and the amount
+                  of blood according to age and size.
+              </p>
+              <img src="../images/bb3.jpg" alt="thubnails" class="img">
           </article>
           <article>
-              <div class="img">
-
-              </div>
-              Your are saving billions of lives and making
-their life easier and possible by donating your
-precious blood. You can also track the number
-of recipients in your area who are sending
-love and their wishes to donors.
+              <img src="../images/bb.jpg" alt="thubnails" class="img">
+              <p>
+                  Your are saving billions of lives and making
+                  their life easier and possible by donating your
+                  precious blood. You can also track the number
+                  of recipients in your area who are sending
+                  love and their wishes to donors.
+              </p>
           </article>
 
-          </div>
-<div class="quote">
-    <p>“ Our role is to develop techniques that allow us to provide emergency
-life-saving procedures to injured patients in an extreme, remote
-environment without the presence of a physician. ”</p>
-<i>by Chris Hadfiels</i>
+      </div>
+      <div class="quote">
+          <p>
+            “ Our role is to develop techniques that allow us to provide emergency
+            life-saving procedures to injured patients in an extreme, remote
+            environment without the presence of a physician. ”
+          </p>
+          <i>by Chris Hadfiels</i>
+      </div>
 
-</div>
+    </main>
+    <footer>
 
-      </main>
-      <footer>
-
-      </footer>
+    </footer>
+    <script src="../js/main.js" charset="utf-8"></script>
 </body>
 </html>

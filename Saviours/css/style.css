@@ -1,17 +1,192 @@
-
-
-* {
+*{
     box-sizing: border-box;
 }
-body {
-    font-family: Verdana, sans-serif; margin:0;
-    background-color:#daecf3;
-}
-main{
 
-    padding-left: 2rem;
-    padding-right: 2rem;
+body{
+    font-family: Verdana, sans-serif; margin:0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+button{
+    outline: inherit;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/*=======================================================================*/
+/*============================= HEADER ==================================*/
+/*=======================================================================*/
+#logo,.header #logolink{
+    width: 100px;
+    height: auto;
+    display: block;
+}
+.header{
+    background-color: #022d41;
+    color: white;
+    display: grid;
+    grid-template-columns: .25fr 1fr;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    height: auto;
+    padding: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+  }
+  .navbar button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    border-radius: 25px;
+    padding: .5rem;
+    width: 7rem;
+  }
+  button#logout_button,button#login_button{
+    background-color: #fe424d;
+    border: none;
+    color: white;
+    border-radius: 25px;
+    padding: .5rem;
+    width: 7rem;
+  }
+  .navbar {
+    overflow: hidden;
+    background-color: #022d41;
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: 130px 130px 130px 130px;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .navbar a{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+  }
+  .navbar a:hover{
+      background-color: #004444;
+      text-align: center;
+  }
+
+  button#menubar{
+      display: none;
+  }
+  .dropbutton {
+    overflow: hidden;
+    }
+  .dropbutton .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+
+  .dropdown{
+    display: none;
+    background-color: #022d41;
+    min-width: 160px;
+    position: fixed;
+    top: 3rem;
+    padding: 12px 16px;
+    margin-right: 1rem;
+    z-index: 1;
+    text-align: center;
+  }
+
+  .dropbutton a{
+    color: white;
+    padding: 12px 16px;
+    margin-right: 1rem;
+    text-decoration: none;
+    background-color: #022d41;
+    display: block;
+    text-align: center;
+  }
+
+  .dropbutton a:hover {
+    background-color: #004444;
+  }
+
+  .dropbutton:hover .dropdown {
+  display: flex;
+  flex-flow: column nowrap;
+
+  }
+
+@media screen and (max-width:700px){
+    .header{
+        display: grid;
+        grid-template-columns: 1fr .15fr;
+        padding: 0.5rem;
+    }
+    button#menubar,#close{
+        display: block;
+        background-color: inherit;
+        color: white;
+        border: none;
+        padding: 0;
+        font-size: 24px;
+    }
+
+    .navbar{
+        display: none;
+    }
+
+    body.show-menu .navbar{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 50px 50px 50px;
+        justify-items: center;
+        height: 200px;
+        width: 100%;
+        position: absolute;
+        top: 3rem;
+        right: 0;
+        text-align: center;
+
+        padding-right: 1rem;
+    }
+    .dropdown{
+        top: 6rem;
+        left: 56%;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+
+/*=======================================================================*/
+/*============================= Index Page ==============================*/
+/*=======================================================================*/
+
+.slider{
+    width: 100%;
+    height: auto;
+    background-color: #daecf3;
+}
+
 .mySlides {display: none}
 .slideshow-container img {
     vertical-align: middle;
@@ -19,17 +194,7 @@ main{
     height: 350px;
 
 }
-img{
-    display: block;
-    padding: 0;
-    margin: 0;
-}
-header img{
-    margin: 0;
-    padding: 0;
-    width: 10rem;
-    height:5rem;
-}
+
 
 /* Slideshow container */
 .slideshow-container {
@@ -67,7 +232,7 @@ header img{
 }
 
 
-/* Number text (1/3 etc) */
+/* Number text on left corner of slider*/
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
@@ -101,12 +266,12 @@ header img{
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4}
+  from {opacity: 0.3}
   to {opacity: 1}
 }
 
 @keyframes fade {
-  from {opacity: .4}
+  from {opacity: 0.3}
   to {opacity: 1}
 }
 
@@ -115,354 +280,13 @@ header img{
   .prev, .next {font-size: 11px}
 }
 
-
-
-
-
-/*======================================================================================*/
-a{
-  text-decoration: none;
-  color: white;
-}
-button{
-    outline: inherit;
-}
-
-
-/*=============================================header===============================*/
-#logo,.header #logolink{
-    width: 150px;
-    height: 120px;
-    display: block;
-}
-.header{
-    background-color: #022d41;
-    color: white;
-    display: grid;
-    grid-template-columns: .5fr 1fr;
-    align-items: center;
-    justify-content: center;
-    height: 60px;
-    align-content: center;
-    padding: 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 99;
-  }
-  .navbar button{
-    background-color: transparent;
-    border: none;
-    color: white;
-    border-radius: 25px;
-    padding: .5rem;
-    width: 7rem;
-  }
-  button#logout_button,button#login_button{
-    background-color: #fe424d;
-    border: none;
-    color: white;
-    border-radius: 25px;
-    padding: .5rem;
-    width: 7rem;
-  }
-  .navbar {
-    overflow: hidden;
-    background-color: #022d41;
-    width: auto;
-    height: 60px;
-    display: grid;
-    grid-template-columns: 130px 130px 130px 130px;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  .navbar a:hover{
-      background-color: #004444;
-      width: 100%;
-      height: 40px;
-      text-align: center;
-  }
-.navbar a{
-    display: grid;
-    align-items: center;
-}
-  button#menubar{
-      display: none;
-  }
-  .dropbutton {
-    overflow: hidden;
-    }
-  .dropbutton .dropbtn {
-    font-size: 16px;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-  }
-
-  .dropdown{
-    display: none;
-    background-color: #022d41;
-    min-width: 160px;
-    position: fixed;
-    top: 3rem;
-    padding: 12px 16px;
-    margin-right: 1rem;
-    z-index: 1;
-    text-align: center;
-  }
-
-  .dropbutton a{
-    color: white;
-    padding: 12px 16px;
-    margin-right: 1rem;
-    text-decoration: none;
-    background-color: #022d41;
-    display: block;
-    text-align: left;
-  }
-
-  .dropbutton a:hover {
-    background-color: #004444;
-  }
-
-  .dropbutton:hover .dropdown {
-  display: flex;
-  flex-flow: column nowrap;
-  }
-
-@media screen and (max-width:800px){
-    .header{
-        display: grid;
-        grid-template-columns: 1fr .15fr;
-        padding: 0.5rem;
-    }
-    button#menubar,#close{
-        display: block;
-        background-color: inherit;
-        color: white;
-        border: none;
-        padding: 0;
-        font-size: 24px;
-    }
-
-    .navbar{
-        display: none;
-    }
-
-    body.show-menu .navbar{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 50px 50px 50px 50px;
-        justify-items: center;
-        height: 200px;
-        width: 100%;
-        position: absolute;
-        top: 3.5rem;
-        right: 0;
-
-        padding-right: 1rem;
-    }
-    .dropdown{
-        top: 7rem;
-        right: 0;
-    }
-}
-
-
-
-  /*=============================================Login page===============================*/
-  .login {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    background-color: red;
-  }
-
-  .login #dashboard{
-    background-color: lightgray;
-  }
-
-  .login-box{
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    height: 90vh;
-    background-color: white;
-  }
-  .login input{
-    background-color: transparent;
-    border: .15rem solid black;
-    border-radius: 25px;
-    height: 2rem;
-    margin: 1rem;
-    padding: 1rem;
-    outline: inherit;
-  }
-  .login .login-box button{
-    width: 200px;
-    height: 30px;
-    border-radius: 25px;
-    border: 1px solid transparent;
-  }
-  .login-box #userimg{
-    width: 7rem;
-    height: 7rem;
-    border: 1px solid black;
-    border-radius: 50%;
-
-  }
-  .login .signup a{
-    text-decoration: none;
-    color: rgb(10,73,88);
-    font-weight: bolder;
-  }
-
-  @media screen and (max-width:600px){
-    .login{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-    .login #dashboard{
-        display: none;
-    }
-  }
-
-
-  .login-box .check-box{
-      display: grid;
-      grid-template-columns: .1fr .5fr;
-      justify-content: center;
-      font-size:.5rem;
-      color: rgb(66,33,11);
-      font-weight: bolder;
-      align-items: center;
-      justify-items: center;
-      margin: 0;
-      padding: 0;
-  }
-  .login-box .check-box input{
-      background: transparent;
-      border: 1px solid rgb(10,73,88);
-      width: max-content;
-      margin: 0;
-      padding: 0;
-      height: auto;
-  }
-
-  .psw{
-      margin-bottom: 3rem;
-      font-size: .5rem;
-      color: rgb(66,33,11);
-      margin: 0;
-      padding: 0;
-  }
-  .psw a{
-      text-decoration: none;
-      color: rgb(10,73,88);
-      font-weight: bolder;
-  }
-  .inline{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      text-align: center;
-      width: 20rem;
-      align-items: center;
-      height: 40px;
-  }
-
-  .login-box .signup{
-      font-size: .5rem;
-      margin: .5rem;
-      width: 10rem;
-      display: grid;
-      justify-content: center;
-      justify-items: center;
-  }
-
-/*=======================================SIGN UP ==============================*/
-
-.signup{
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-}
-.signup div:first-child{
-  background-color: lightgray;
-}
-.signup-box{
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  height: 90vh;
-  background-color: white;
-}
-.signup input{
-  background-color: transparent;
-  border: 1px solid black;
-  border-radius: 25px;
-  height: 30px;
-  margin: 1rem;
-  padding: 1rem;
-}
-.signup .signup-box button{
-  width: 200px;
-  height: 30px;
-  border-radius: 25px;
-  border: 1px solid transparent;
-}
-.signup-box span{
-  width: 7rem;
-  height: 7rem;
-  border: 1px solid black;
-  border-radius: 50%;
-
-}
-.signup a{
-    color: black;
-}
-
-#gotologin{
-    background-color: transparent;
-    border: none;
-    color: blue;
-}
-
-@media screen and (max-width:600px){
-  .signup{
-      display: grid;
-      grid-template-columns: 1fr;
-  }
-  .signup div:first-child{
-      display: none;
-  }
-}
-
-
-/*=======================================INDEX PAGE==============================*/
-body.index{
-    display: grid;
-    justify-content: center;
-    justify-items: center;
-    padding-left: 5rem;
-    padding-right: 5rem;
-}
-.slider{
-    width: 100%;
-    height: 120;
-    background-color: #daecf3;
-}
+/* icons under the slider */
 .services{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     justify-content: center;
     justify-items: center;
-    margin: 4rem;
+    margin: 1rem;
     text-align: center;
 }
 .services span img{
@@ -506,6 +330,9 @@ body.index{
       display: grid;
 
 }
+
+
+/* intr0duction text below the data chart */
 .intro{
     display: grid;
     align-items: center;
@@ -534,20 +361,238 @@ hr{
     width: 7rem;
     margin: 1rem;
 }
-@media screen and (max-width:800px) {
-    .services span img{
-        width: 5rem;
-        height: 5rem;
-    }
-    .services span p{
-        width: 5rem;
-        height: 5rem;
-    }
+
+.is-this-you{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 100%;
+  background-color: #daecf3;
+  align-items: center;
+}
+
+@media only screen and (min-width: 600px){
+  .is-this-you{
+    font-size: 150%;
+  }
+  .services{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 
 }
 
-/*=======================================DONATION PAGE==============================*/
+/*=======================================================================*/
+/*============================= LOGIN  ==================================*/
+/*=======================================================================*/
 
+
+.login{
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  background-color: #daecf3;
+  height: 91.7vh;
+}
+.login #welcomeblock{
+  display: none;
+}
+
+.login-box{
+  display: grid;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
+}
+.login input{
+  background-color: transparent;
+  border: .15rem solid black;
+  border-radius: 25px;
+  width: 90%;
+  height: 2rem;
+  margin: 1rem;
+  padding: 1rem;
+  outline: inherit;
+}
+.login .login-box #login_button{
+  width: 90%;
+  height: 30px;
+  border-radius: 25px;
+  border: 1px solid transparent;
+}
+.login-box #userimg{
+  width: 7rem;
+  height: 7rem;
+  border: 1px solid black;
+  border-radius: 50%;
+
+}
+
+.login-box .check-box{
+    display: grid;
+    grid-template-columns: .1fr .75fr;
+    justify-content: center;
+    font-size:.75rem;
+    color: rgb(66,33,11);
+    font-weight: bolder;
+    align-items: center;
+    justify-items: center;
+    margin: 0;
+    padding: 0;
+}
+.login-box .check-box input{
+    background: transparent;
+    border: 1px solid rgb(10,73,88);
+    width: max-content;
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+.psw{
+    margin-bottom: 3rem;
+    font-size: .75rem;
+    color: rgb(66,33,11);
+    margin: 0;
+    padding: 0;
+}
+.psw a{
+    text-decoration: none;
+    color: rgb(10,73,88);
+    font-weight: bolder;
+}
+.inline{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    width: 20rem;
+    align-items: center;
+    height: 40px;
+}
+
+.login-box .signup_button{
+    font-size: .75rem;
+    margin: .5rem;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    justify-items: center;
+}
+.signup_button a{
+  display: grid;
+  border: 2px solid #fe424d;
+  color: #fe424d;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  align-content: center;
+  font-size: 1rem;
+  border-radius: 25px;
+}
+@media screen and (min-width:700px){
+  .login {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    height: 91.7vh;
+    background-color: white;
+  }
+  .login #welcomeblock{
+    display: grid;
+    width: 100%;
+    height: 91.8vh;
+    background-color: #daecf3;
+  }
+}
+/*=======================================================================*/
+/*============================= SIGN UP ==================================*/
+/*=======================================================================*/
+
+
+.signup{
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  height: 91.7vh;
+  background-color: #daecf3;
+}
+.signup #welcomeblock{
+  display: none;
+}
+
+.signup-box{
+  display: grid;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
+}
+.signup input{
+  background-color: transparent;
+  border: .15rem solid black;
+  border-radius: 25px;
+  width: 100%;
+  height: 2rem;
+  margin: 1rem;
+  padding: 1rem;
+  outline: inherit;
+}
+.signup .signup-box #addbtnn{
+
+  width: 100%;
+  height: 30px;
+  border-radius: 25px;
+  background-color: #fe424d;
+  border: none;
+}
+.signup-box #userimg{
+  width: 7rem;
+  height: 7rem;
+  border: 1px solid black;
+  border-radius: 50%;
+
+}
+
+
+
+@media screen and (min-width:700px){
+  .signup {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    height: 89vh;
+    background-color: white;
+  }
+  .signup #welcomeblock{
+    display: grid;
+    width: 100%;
+    height: 91.8vh;
+    background-color: #daecf3;
+  }
+}
+
+#gotologin{
+    background-color: transparent;
+    border: none;
+    color: blue;
+}
+
+@media screen and (max-width:600px){
+  .signup{
+      display: grid;
+      grid-template-columns: 1fr;
+  }
+  .signup div:first-child{
+      display: none;
+  }
+}
+
+/*======================================================================================*/
+/*========================================= APPOINTMENTS PAGE ==========================*/
+/*======================================================================================*/
 
 .donate{
   display: grid;
@@ -785,39 +830,109 @@ div.point{
 
 }
 
-/*================================================= learn Page =================================*/
+
+/*======================================================================================*/
+/*========================================= LEARN PAGE ================================*/
+/*======================================================================================*/
+
+
 .learn{
-    display: grid;
-    justify-content: center;
-    justify-items: center;
-    padding-left: 10rem;
-    padding-right: 10rem;
-    display: grid;
-    justify-items: center;
-    box-sizing: inherit;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
 }
 .article{
-    display: flex;
-    flex-flow: column nowrap;
-    font-size: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  font-size: 4vw;
 }
 article{
-    padding: 0;
-    margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  padding-left: 3rem;
+  padding-right: 3rem;
+
 }
-article:nth-child(even){
+
+article .img{
+  grid-row: 1;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.quote{
+  padding: 1rem;
+  background-color: #daecf3;
+  text-align: center;
+}
+@media screen and (min-width:600px){
+  .article{
+    font-size: 2vw;
+  }
+  article .img{
+    grid-row: inherit;
+    width: inherit;
+    justify-content: left;
+  }
+  article:nth-child(odd){
     display: grid;
-    grid-template-columns: 2fr 3fr;
-}
-article:nth-child(odd){
+    grid-template-columns: 1fr .5fr;
+
+  }
+  article:nth-child(even){
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: .5fr 1fr;
+
+  }
 }
-.img{
-    width: 300px;
-    height: 150px;
-    background-color: lightgray;
-}
+
+/*======================================================================================*/
+/*========================================= END OF FILE ================================*/
+/*======================================================================================*/
+
+
+/*======================================================================================*/
+/*========================================= END OF FILE ================================*/
+/*======================================================================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*======================================================================================*/
+/*========================================= END OF FILE ================================*/
+/*======================================================================================*/
+
+
+
+/*=======================================INDEX PAGE==============================*/
+
+/*=======================================DONATION PAGE==============================*/
+
+
+
+
+/*================================================= learn Page =================================*/
+
 /*=================================================ABOUT US===========================================*/
 
 .about .team{

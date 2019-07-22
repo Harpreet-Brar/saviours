@@ -9,63 +9,61 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-   <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
-     <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
-    <title>SAVIOURS</title>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <title>APPOINTMENTS</title>
 </head>
 <body>
     <header class="header" style="text-align:center">
+        <a href="../index.html" id="logolink"><img id="logo" alt="Logo" src="../images/logo.png"></a>
 
-                <a href="../index.html"><img width="100" alt="Logo" src="../images/logo.png"></a>
-                <button type="button" class="fa fa-bars" id="menubar">
+        <button type="button" class="fa fa-bars" id="menubar"></button>
+
+        <div class="navbar" id="navbar">
+            <a href="donate.html"><span>Appointment</span></a>
+            <div class="dropbutton">
+                <button class="dropbtn">Donate
+                    <i class="fa fa-caret-down"></i>
                 </button>
-                <div class="navbar">
-          <a href="donate.html">Appointment</a>
-          <div class="dropbutton">
-            <button class="dropbtn">Donate
-            <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown">
-              <a href="learn.html">Process Of Donation</a>
-              <a href="eligible.html">Eligible to donate?</a>
+                <div class="dropdown">
+                    <a href="learn.html">Process Of Donation</a>
+                    <a href="eligible.html">Eligible to donate ?</a>
+                </div>
             </div>
+            <a href="about.html"><span>About us</span></a>
+            <a href="login.html"><button type="button" name="button" id="logout_button">Log out</button></a>
+        </div>
+    </header>
+
+    <main class="donate">
+        <span class="bar1" id="bar">
+        <div class="point" id="point"></div></span>
+        <div class="donate-box">
+            <div class="start">
+                <h2>Book your Appointment</h2>
+            </div>
+          <span class="loc" id="loc">
+          <input type="text" name="location" placeholder="Enter Your Location">
+          <button class="loc_search" type="button" name="button">Search</button>
+          </span>
+          <select class="hide" id="selection">
+            <option value="Canadian Blood Services, Dunsmuir St.">Canadian Blood Services, Dunsmuir St.</option>
+            <option value="SAP.910 Mainland St">SAP.910 Mainland St</option>
+            <option value="Vancouver Fire Hall No. 1 - Strathcona">Vancouver Fire Hall No. 1 - Strathcona</option>
+            <option value="Pipe Shop 115 Victory Ship Way">Pipe Shop 115 Victory Ship Way</option>
+          </select>
+          <ul class="centre_list">
+          </ul>
+          <div class="end">
           </div>
-    <a href="about.html">About us</a>
-          <a href="#" id="logout_button"><button type="button" name="button" id="logout_button">Log Out</button></a>
         </div>
 
-      </header>
-      <main class="donate">
-          <span class="bar1" id="bar">
-          <div class="point" id="point"></div></span>
-          <div class="donate-box">
-              <div class="start">
-                  <h2>Book your Appointment</h2>
-              </div>
-            <span class="loc" id="loc">
-            <input type="text" name="location" placeholder="Enter Your Location">
-            <button class="loc_search" type="button" name="button">Search</button>
-        </span>
-              <select class="hide" id="selection">
-                  <option value="Canadian Blood Services, Dunsmuir St.">Canadian Blood Services, Dunsmuir St.</option>
-                  <option value="SAP.910 Mainland St">SAP.910 Mainland St</option>
-                  <option value="Vancouver Fire Hall No. 1 - Strathcona">Vancouver Fire Hall No. 1 - Strathcona</option>
-                  <option value="Pipe Shop 115 Victory Ship Way">Pipe Shop 115 Victory Ship Way</option>
-              </select>
-              <ul class="centre_list">
+    </main>
+    <footer>
 
-              </ul>
-              <div class="end">
+    </footer>
 
-              </div>
-          </div>
-
-      </main>
-      <footer>
-
-      </footer>
-
-      <script src="../js/main.js" charset="utf-8"></script>
+    <script src="../js/main.js" charset="utf-8"></script>
 </body>
 </html>

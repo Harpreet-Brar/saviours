@@ -14,7 +14,7 @@ function dashboard(id, fData){
 
         //create svg for histogram.
         var hGsvg = d3.select(id).append("svg")
-            .attr("width", hGDim.w + hGDim.l + hGDim.r)
+            .attr("width", "100%")
             .attr("height", hGDim.h + hGDim.t + hGDim.b).append("g")
             .attr("transform", "translate(" + hGDim.l + "," + hGDim.t + ")");
 

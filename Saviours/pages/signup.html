@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,52 +9,52 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-   <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
-     <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
     <title>SIGN UP</title>
 </head>
 <body>
     <header class="header" style="text-align:center">
+        <a href="../index.html" id="logolink"><img id="logo" alt="Logo" src="../images/logo.png"></a>
 
-                        <a href="../index.html"><img width="100" alt="Logo" src="../images/logo.png"></a>
-                        <button type="button" class="fa fa-bars" id="menubar">
-                        </button>
-                        <div class="navbar">
-                  <a href="donate.html">Appointments</a>
-                  <div class="dropbutton">
-                    <button class="dropbtn">Donate
+        <button type="button" class="fa fa-bars" id="menubar"></button>
+
+        <div class="navbar" id="navbar">
+            <a href="donate.html"><span>Appointment</span></a>
+            <div class="dropbutton">
+                <button class="dropbtn">Donate
                     <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown">
-                      <a href="learn.html">Process Of Donation</a>
-                      <a href="eligible.html">Eligible to donate?</a>
-                    </div>
-                  </div>
-            <a href="about.html">About us</a>
-                  <a href="login.html"><button type="button" name="button" id="login_button">Login</button></a>
+                </button>
+                <div class="dropdown">
+                    <a href="learn.html">Process Of Donation</a>
+                    <a href="eligible.html">Eligible to donate ?</a>
                 </div>
+            </div>
+            <a href="about.html"><span>About us</span></a>
+            <a href="login.html"><button type="button" name="button" id="login_button">Login</button></a>
+        </div>
+    </header>
 
-      </header>
-      <main class="signup">
-      <div id="dashboard">
+    <main class="signup">
 
-      </div>
-        <div class="signup-box">
-          <span></span>
+      <div id='welcomeblock'>
+      </div>      
+      <div class="signup-box">
+          <span id="userimg"></span>
           <input type="text" placeholder="First Name">
           <input type="text" placeholder="Last Name">
           <input id="email" type="text" placeholder="Enter Email" name="email" autocomplete="off" required>
-         <input id="paswd" type="password" placeholder="Enter Password" name="psw" required>
-         <input id="cnfr" type="password" placeholder="Confirm Password" name="cnfrm" required>
-         <button class="sign-button" id="addbtnn" type="submit">SIGNUP</button>
-         <button class="gotologin-button goto" id="gotologin" type="submit">Already have a account</button>
+          <input id="paswd" type="password" placeholder="Enter Password" name="psw" required>
+          <input id="cnfr" type="password" placeholder="Confirm Password" name="cnfrm" required>
+          <button class="sign-button" id="addbtnn" type="submit">SIGNUP</button>
+          <button class="gotologin-button goto" id="gotologin" type="submit">Already have a account?</button>
+      </div>
+    </main>
+    <footer>
 
-        </div>
-      </main>
-      <footer>
-
-      </footer>
-      <script src="../js/main.js" charset="utf-8"></script>
+    </footer>
+    <script src="../js/main.js" charset="utf-8"></script>
 </body>
+
 </html>
