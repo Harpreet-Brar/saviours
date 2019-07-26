@@ -8,8 +8,19 @@ body{
     height: 100%;
     margin: 0;
     padding: 0;
-}
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: grid;
+    justify-items: center;
 
+}
+main{
+  background-color: white;
+  width: 80%;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+
+}
 a{
   text-decoration: none;
   color: white;
@@ -40,7 +51,8 @@ img{
     align-items: center;
     align-content: center;
     justify-content: flex-start;
-    height: auto;
+    width: 100%;
+    height: 45px;
     padding: 0;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -63,12 +75,12 @@ img{
     border-radius: 25px;
     padding: .5rem;
     width: 7rem;
+    height:30px;
   }
   .navbar {
-    overflow: hidden;
     background-color: #022d41;
     width: auto;
-    height: auto;
+    height: 45px;
     display: grid;
     grid-template-columns: 130px 130px 130px 130px;
     justify-content: flex-end;
@@ -86,7 +98,7 @@ img{
       text-align: center;
   }
 
-  button#menubar{
+  button#menubar,button#close{
       display: none;
   }
   .dropbutton {
@@ -108,11 +120,12 @@ img{
     background-color: #022d41;
     min-width: 160px;
     position: fixed;
-    top: 3rem;
+    top: 2.5rem;
     padding: 12px 16px;
     margin-right: 1rem;
     z-index: 1;
     text-align: center;
+    font-size: 1vw;
   }
 
   .dropbutton a{
@@ -141,7 +154,7 @@ img{
         grid-template-columns: 1fr .15fr;
         padding: 0.5rem;
     }
-    button#menubar,#close{
+    button#menubar,button#close{
         display: block;
         background-color: inherit;
         color: white;
@@ -162,15 +175,16 @@ img{
         height: 200px;
         width: 100%;
         position: absolute;
-        top: 3rem;
+        top: 2.5rem;
         right: 0;
         text-align: center;
 
         padding-right: 1rem;
     }
     .dropdown{
+        font-size: 2vw;
         top: 6rem;
-        left: 56%;
+        left: 56.5%;
         padding: 0;
         margin: 0;
     }
@@ -180,19 +194,17 @@ img{
 /*=======================================================================*/
 /*============================= Index Page ==============================*/
 /*=======================================================================*/
-
 .slider{
     width: 100%;
     height: auto;
-    background-color: #daecf3;
+    background-color:#daecf3;
 }
 
 .mySlides {display: none}
 .slideshow-container img {
     vertical-align: middle;
-    width: 100%;
-    height: 350px;
-
+    width: 1500px;
+    height: 400px;
 }
 
 
@@ -223,7 +235,9 @@ img{
 /* Position the "next button" to the right */
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
+}
+.prev{
+  left:0;
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -252,6 +266,7 @@ img{
   display: inline-block;
   transition: background-color 0.6s ease;
 }
+
 
 .active, .dot:hover {
   background-color: #717171;
@@ -286,48 +301,42 @@ img{
     grid-template-columns: 1fr;
     justify-content: center;
     justify-items: center;
-    margin: 1rem;
+    margin: 3rem;
     text-align: center;
 }
 .services span img{
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
+    width: 7rem;
+    height: 7rem;
     margin: 0;
-    padding: 0;
+    padding: .5rem;
+    border-radius: 50%;
+    background-color: #022d41;
 
 }
-.services span p{
-    display: none;
-    width: 10rem;
-    height: 10rem;
-    background-color: rgba(255,100,10,0.8);
-    color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 50%;
-    text-align: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-}
 .services span{
+    cursor: pointer;
     display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr .25fr .25fr;
     justify-content: center;
+    justify-items: center;
     width: 10rem;
     height: 10rem;
     overflow: hidden;
-    border-radius: 50%;
     padding: 0;
     margin: 0;
     position: relative;
 
 
 }
+.services span p{
+  display: none;
+  margin: 0;
+  font-size: .75rem;
+}
 .services span:hover p{
-    cursor: pointer;
       display: grid;
+      color: #fe424d;
 
 }
 
@@ -337,11 +346,12 @@ img{
     display: grid;
     align-items: center;
     justify-items: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 .intro p{
     text-align: center;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    padding: 2.5rem;;
 }
 .intro h2{
     text-align: center;
@@ -424,7 +434,6 @@ hr{
 .login-box #userimg{
   width: 7rem;
   height: 7rem;
-  border: 1px solid black;
   border-radius: 50%;
 
 }
@@ -433,7 +442,7 @@ hr{
     display: grid;
     grid-template-columns: .1fr .75fr;
     justify-content: center;
-    font-size:.75rem;
+    font-size:.5rem;
     color: rgb(66,33,11);
     font-weight: bolder;
     align-items: center;
@@ -452,7 +461,7 @@ hr{
 
 .psw{
     margin-bottom: 3rem;
-    font-size: .75rem;
+    font-size: .5rem;
     color: rgb(66,33,11);
     margin: 0;
     padding: 0;
@@ -466,7 +475,7 @@ hr{
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
-    width: 20rem;
+    width: 100%;
     align-items: center;
     height: 40px;
 }
@@ -491,18 +500,22 @@ hr{
   font-size: 1rem;
   border-radius: 25px;
 }
-@media screen and (min-width:700px){
+@media screen and (min-width:600px){
   .login {
     display: grid;
     grid-template-columns: 60% 40%;
-    height: 91.7vh;
+    height: 100%;
     background-color: white;
   }
   .login #welcomeblock{
     display: grid;
+    justify-items: center;
+    align-items: center;
     width: 100%;
-    height: 91.8vh;
+    height: 100%;
+    padding-bottom: 3rem;
     background-color: #daecf3;
+    padding-left: 2rem;
   }
 }
 /*=======================================================================*/
@@ -516,7 +529,8 @@ hr{
   align-items: center;
   align-content: center;
   justify-content: center;
-  height: 91.7vh;
+  height: 100%;
+  width: 100%;
   background-color: #daecf3;
 }
 .signup #welcomeblock{
@@ -527,11 +541,79 @@ hr{
   display: grid;
   align-items: center;
   align-content: center;
-  justify-content: center;
   justify-items: center;
   width: 100%;
+  height: 100%;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+
 }
 .signup input{
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 25px;
+  width: 60%;
+  height: 2rem;
+  margin: 10px;
+  padding: 1rem;
+  outline: inherit;
+}
+.signup .signup-box #addbtnn{
+
+  width: 80%;
+  height: 30px;
+  border-radius: 25px;
+  background-color: #fe424d;
+  color:white;
+  border: none;
+}
+.signup-box #userimg{
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+
+}
+
+.gender{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  flex-grow: 1;
+  width: 80%;
+  height: 30px;
+  margin-top: 0;
+  font-size: 2vw;
+}
+.gender ul{
+  display: grid;
+  grid-template-columns: .5fr 20px;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  justify-content: left;
+  margin: 0;
+  padding: 0;
+}
+.gender span{
+  width: auto;
+}
+.gender input{
+  margin: 0;
+  padding: 0;
+  width: 1rem;
+  margin-top: 3px;
+}
+.bloodgroup{
+  display: grid;
+  grid-template-columns: 1fr .25fr 1fr 1fr;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  width: 80%;
+  margin-top: .5rem;
+  font-size: 2vw;
+}
+.bloodgroup select{
+  margin-right: .5rem;
   background-color: transparent;
   border: .15rem solid black;
   border-radius: 25px;
@@ -541,44 +623,49 @@ hr{
   padding: 1rem;
   outline: inherit;
 }
-.signup .signup-box #addbtnn{
-
-  width: 100%;
-  height: 30px;
-  border-radius: 25px;
-  background-color: #fe424d;
+.bloodgroup input{
+  width: 70%;
+}
+#gotologin{
+  background-color: transparent;
   border: none;
-}
-.signup-box #userimg{
-  width: 7rem;
-  height: 7rem;
-  border: 1px solid black;
-  border-radius: 50%;
-
+  color: blue;
 }
 
-
-
-@media screen and (min-width:700px){
+@media screen and (min-width:600px){
   .signup {
     display: grid;
     grid-template-columns: 60% 40%;
-    height: 89vh;
+    height: 100%;
     background-color: white;
   }
   .signup #welcomeblock{
     display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
     width: 100%;
-    height: 91.8vh;
+    height: 100%;
     background-color: #daecf3;
+    text-align: center;
+    font-family: fantasy;
+    padding-bottom: 20rem;
+    position: sticky;
+    top: 0;
+  }
+  .signup #welcomeblock h2{
+      font-size: 5rem;
+      font-weight: lighter;
+      margin: 0;
+      padding: 0;
+  }
+  .bloodgroup,.gender{
+    font-size: 1vw;
   }
 }
 
-#gotologin{
-    background-color: transparent;
-    border: none;
-    color: blue;
-}
+
 
 @media screen and (max-width:600px){
   .signup{
@@ -596,10 +683,11 @@ hr{
 
 .donate{
   display: grid;
-  grid-template-columns: 20% 70%;
+  grid-template-columns: 30% 70%;
   justify-content: center;
   height: 100%;
-  margin: 1rem;
+  background-color: #daecf3;
+  height:100vh;
 }
 .donate div.progress{
   background-color: lightgray;
@@ -612,6 +700,9 @@ hr{
   justify-content: center;
   align-items: center;
   height: 100%;
+  background-color: #1aa6B7;
+  padding: 20px;
+
 }
 
 .donate-box .loc{
@@ -624,13 +715,13 @@ hr{
 
 .donate input,.donate .selection{
     text-align: center;
-    border: 1px solid black;
+    border: 3px solid black;
       border-radius: 25px;
-      width: 25rem;
-      height: 2.5rem;
+      width: 18rem;
+      height: 2rem;
       padding: .25rem;
       outline: inherit;
-      font-size: 24px;
+      font-size: 1rem;
       margin: 1rem;
 }
 
@@ -639,71 +730,77 @@ hr{
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     width: 2.5rem;
     height: 70vh;
-    border: 2px solid black;
+    border: 3px solid black;
     border-radius: 20px;
     margin-top: 25%;
     padding: 0;
+    margin: 20% 45% 20% 45%;
+
 }
 .bar2{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     width: 2.5rem;
     height: 70vh;
-    border: 1px solid black;
+    border: 3px solid black;
     border-radius: 20px;
     margin-top: 25%;
     padding: 0;
+    margin: 20% 45% 20% 45%;
 }
 .bar3{
     display: grid;
     grid-template-rows: 1fr 1fr .5fr;
     width: 2.5rem;
     height: 70vh;
-    border: 1px solid black;
+    border: 3px solid black;
     border-radius: 20px;
     margin-top: 25%;
     padding: 0;
+    margin: 20% 45% 20% 45%;
 }
 .bar4{
     display: grid;
     grid-template-rows:1fr .5fr;
     width: 2.5rem;
     height: 70vh;
-    border: 1px solid black;
+    border: 3px solid black;
     border-radius: 20px;
     margin-top: 25%;
     padding: 0;
+    margin: 20% 45% 20% 45%;
 }
 .bar5{
     display: grid;
     grid-template-rows: 1fr;
     width: 2.5rem;
     height: 70vh;
-    border: 1px solid black;
+    border: 3px solid black;
     border-radius: 20px;
     margin-top: 25%;
     padding: 0;
+    margin: 20% 45% 20% 45%;
 }
 
 div.point{
     width: 100%;
     height: 100%;
-    background-color: hotpink;
+    background-color: #fe424d;
     border-radius: 15px;
 }
 
 .loc_search{
       background-color: transparent;
-      border: 2px solid black;
+      border: 3px solid #fe424d;
       color: white;
       border-radius: 25px;
-      padding: .5rem;
-      width: 150px;
-      height: 45px;
+      padding: 0;
+      width: 120px;
+      height: 35px;
       position: relative;
       margin-bottom: 1rem;
-      background-color: black;
-      font-size: 1.5rem;
+      background-color: #fe424d;
+      font-size: 1.25rem;
 }
 .hide{
     display: none;
@@ -711,7 +808,7 @@ div.point{
 .entry{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border: 1px solid black;
+    border: 3px solid black;
     width: 25rem;
     text-align: center;
     padding: 2rem;
@@ -720,53 +817,68 @@ div.point{
 .entry2{
     display: grid;
     grid-template-columns:1fr;
-    border: 1px solid black;
+    border: 3px solid black;
     width: 25rem;
     text-align: center;
     padding: 2rem;
     margin: .5rem;
 }
 .entry button{
-    width: 90%;
+    width: 80%;
     border-radius: 25px;
-    background-color: black;
+    background-color: white;
     border: none;
-    color: white;
+    color: #fe424d;
+    height: 30px;
+    font-size: 1.25rem;
 }
 .entry2 input{
     width: auto;
+
+
 }
 .start{
     display: grid;
     align-items: center;
-    background-color: orange;
+    background-color: #daecf3;
     border-radius: 25px 25px 0 0;
-    width: 100%;
+    width: 80%;
     height: 40px;
     text-align: center;
-    color: white;
+    color: black;
     font-style: italic;
     margin-bottom: 2rem;
+
 }
 .start h2{
     padding: 0;
     margin: 0;
+
 }
 .end{
-    background-color: orange;
+    background-color: #daecf3;
     border-radius: 0 0 25px 25px;
-    width: 100%;
+    width: 80%;
     height: 40px;
     text-align: center;
 }
 
 .entry2 select,.entry2 #sub{
     height: 40px;
-    border: 1px solid black;
+    border: 3px solid black;
+
     border-radius: 25px;
     text-align: center;
     margin-top: .5rem;
     outline: inherit;
+    font-size: 1.5rem;
+
+}
+.entry2 #sub{
+    border: 3px solid #fe424d!important;
+    color:#fe424d!important;
+    background-color: white;
+    margin-top: 15px;
 
 }
 @media screen and (max-width:600px){
@@ -776,6 +888,7 @@ div.point{
       grid-template-rows: 100px 1fr;
       justify-items: center;
       align-items: center;
+      height:100%;
   }
   .donate div{
       max-width: 100%;
@@ -785,7 +898,7 @@ div.point{
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       height: 2.5rem;
-      width: 70vh;
+      width: 60vh;
       overflow: hidden;
       margin: 0;
   }
@@ -793,7 +906,7 @@ div.point{
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
       height: 2.5rem;
-      width: 70vh;
+      width: 60vh;
       overflow: hidden;
       margin: 0;
   }
@@ -801,7 +914,7 @@ div.point{
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       height: 2.5rem;
-      width: 70vh;
+      width: 60vh;
       overflow: hidden;
       margin: 0;
   }
@@ -809,7 +922,7 @@ div.point{
       display: grid;
       grid-template-rows:1fr 1fr;
       height: 2.5rem;
-      width: 70vh;
+      width: 60vh;
       overflow: hidden;
       margin: 0;
   }
@@ -817,14 +930,14 @@ div.point{
       display: grid;
       grid-template-columns: 1fr;
       height: 2.5rem;
-      width: 70vh;
+      width: 60vh;
       overflow: hidden;
       margin: 0;
   }
   div.point{
       width: 100%;
       height: 2.5rem;
-      background-color: hotpink;
+      background-color: #fe424d;
       border-radius: 15px;
   }
 
@@ -855,17 +968,25 @@ article{
   padding-right: 3rem;
 
 }
+article:nth-child(odd){
+  background-color: #daecf3;
+}
 
 article .img{
   grid-row: 1;
   width: 100%;
-  height: auto;
+  height: 150px;
   display: block;
 }
 .quote{
   padding: 1rem;
   background-color: #daecf3;
   text-align: center;
+  font-size: 3vw;
+  width: 100%;
+}
+article p {
+  padding: .5rem;
 }
 @media screen and (min-width:600px){
   .article{
@@ -873,117 +994,122 @@ article .img{
   }
   article .img{
     grid-row: inherit;
-    width: inherit;
-    justify-content: left;
+    width: 100%;
   }
   article:nth-child(odd){
     display: grid;
     grid-template-columns: 1fr .5fr;
+    justify-items: right;
 
   }
   article:nth-child(even){
     display: grid;
     grid-template-columns: .5fr 1fr;
+    justify-items: left;
 
+  }
+  .quote{
+    font-size: 1.5vw;
   }
 }
 
-/*======================================================================================*/
-/*========================================= END OF FILE ================================*/
-/*======================================================================================*/
+@media screen and (min-width:900px){
+  .article{
+    font-size: 1.5vw;
+    margin: 0;
+  }
+  article{
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  article .img{
+    width: 70%;
+    height: 150;
+  }
+  }
 
 
 /*======================================================================================*/
-/*========================================= END OF FILE ================================*/
+/*========================================= About Us ================================*/
 /*======================================================================================*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*======================================================================================*/
-/*========================================= END OF FILE ================================*/
-/*======================================================================================*/
-
-
-
-/*=======================================INDEX PAGE==============================*/
-
-/*=======================================DONATION PAGE==============================*/
-
-
-
-
-/*================================================= learn Page =================================*/
-
-/*=================================================ABOUT US===========================================*/
 
 .about .team{
-    display: grid;
-    background-color: lightblue;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5rem;
+  display: grid;
+  background-color: lightblue;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 .team span{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 .team hr{
-    width: 100%;
-    border: 1px solid black;
+  width: 100%;
+  border: 1px solid black;
 }
 .team span div img{
 
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0;
 }
 .team div{
-    margin: 1rem;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    position: relative;
+  margin: 1rem;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: relative;
 }
 .team div p{
-    display: none;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: white;
+  display: none;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
 }
 .team div:hover p{
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(255,100,10,0.8);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(5,0,0,0.5);
 }
 #cap{
-    color: grey!important;
-    font-size: 12px;
+  color: grey!important;
+  font-size: 12px;
+}
+
+
+
+
+/*======================================================================================*/
+/*================================== WHY TO DONATE PAGE ================================*/
+/*======================================================================================*/
+
+.why #dashboard{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  width: 500px;
+  background: #daecf3;
+}
+#dashboard svg{
+  flex-grow: 1;
+}
+
+
+/*======================================================================================*/
+/*========================================= END OF FILE ================================*/
+/*======================================================================================*/
+#chartdiv {
+  width: 100%;
+  height: 500px;
 }

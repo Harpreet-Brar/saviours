@@ -39,14 +39,42 @@
     <main class="signup">
 
       <div id='welcomeblock'>
-      </div>      
+          <h2>Welcome </h2>
+          <p>to the home of donors</p>
+
+      </div>
       <div class="signup-box">
-          <span id="userimg"></span>
-          <input type="text" placeholder="First Name">
+          <span id="userimg"><img src="../images/team.png"></span>  <input type="text" placeholder="First Name">
           <input type="text" placeholder="Last Name">
+          <div class="gender">
+              <ul><span>male:</span><input type="radio" name="gender" id="male"></ul>
+              <ul><span>female:</span><input type="radio" name="gender" id="female"></ul>
+              <ul><span>other:</span><input type="radio" name="gender" id="other"></ul>
+          </div>
+          <div class="bloodgroup">
+              <span>
+                  Blood group
+              </span>
+              <select>
+                  <option value="A+">A+</option>
+                  <option value="B+">B+</option>
+                  <option value="A-">A-</option>
+                  <option value="B-">B-</option>
+                  <option value="AB+">AB+</option>
+                  <option value="AB-">AB-</option>
+                  <option value="O+">O+</option>
+                  <option value="O-">O-</option>
+              </select>
+              <span>Age</span>
+              <input type="number"  min="17" max="70" >
+          </div>
           <input id="email" type="text" placeholder="Enter Email" name="email" autocomplete="off" required>
           <input id="paswd" type="password" placeholder="Enter Password" name="psw" required>
           <input id="cnfr" type="password" placeholder="Confirm Password" name="cnfrm" required>
+          <input type="text" placeholder="Address#1">
+          <input type="text" placeholder="Address#2">
+          <input type="text" placeholder="City">
+          <input type="text" maxlength="6" placeholder="Postal Code">
           <button class="sign-button" id="addbtnn" type="submit">SIGNUP</button>
           <button class="gotologin-button goto" id="gotologin" type="submit">Already have a account?</button>
       </div>

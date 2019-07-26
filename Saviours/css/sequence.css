@@ -30,7 +30,7 @@ rect:hover {  fill:blue; }
     align:right;
     width:50px;
 }
-#dashboard{
+#welcomeblock #dashboard{
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
