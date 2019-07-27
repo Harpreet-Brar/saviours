@@ -34,6 +34,7 @@ img{
   display: block;
   max-width: 100%;
   height: auto;
+
 }
 /*=======================================================================*/
 /*============================= HEADER ==================================*/
@@ -359,7 +360,7 @@ img{
     margin-bottom: .25rem;
 }
 hr{
-    width: 5rem;
+    width: 80%;
     margin-bottom: 1rem;
 }
 .intro button{
@@ -419,17 +420,19 @@ hr{
   background-color: transparent;
   border: .15rem solid black;
   border-radius: 25px;
-  width: 90%;
-  height: 2rem;
-  margin: 1rem;
+  width: 100%;
+  height: 1.5rem;
+  margin: .5rem;
   padding: 1rem;
   outline: inherit;
 }
 .login .login-box #login_button{
-  width: 90%;
-  height: 30px;
+  width: 80%;
+  height: 2rem;
   border-radius: 25px;
   border: 1px solid transparent;
+  font-size: 1rem;
+  align-items: center;
 }
 .login-box #userimg{
   width: 7rem;
@@ -499,6 +502,7 @@ hr{
   align-content: center;
   font-size: 1rem;
   border-radius: 25px;
+  margin-top: 10px;
 }
 @media screen and (min-width:600px){
   .login {
@@ -552,10 +556,10 @@ hr{
   background-color: transparent;
   border: 2px solid black;
   border-radius: 25px;
-  width: 60%;
+  width: 50%;
   height: 2rem;
-  margin: 10px;
-  padding: 1rem;
+  margin: 5px;
+  padding: .5rem;
   outline: inherit;
 }
 .signup .signup-box #addbtnn{
@@ -571,17 +575,24 @@ hr{
   width: 7rem;
   height: 7rem;
   border-radius: 50%;
+  margin-bottom: 15px;
 
+}
+button#addbtnn.sign-button{
+    width:40%!important;
+    font-size: 1rem;
 }
 
 .gender{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   flex-grow: 1;
-  width: 80%;
+  width: 50%;
   height: 30px;
   margin-top: 0;
   font-size: 2vw;
+  margin-left: 5%;
+  margin-bottom: 20px;
 }
 .gender ul{
   display: grid;
@@ -604,19 +615,22 @@ hr{
 }
 .bloodgroup{
   display: grid;
-  grid-template-columns: 1fr .25fr 1fr 1fr;
+  grid-template-columns: .25fr .12fr .1fr .2fr;
   align-items: center;
   align-content: center;
   justify-items: center;
   width: 80%;
-  margin-top: .5rem;
+  margin-top: -10px;
+  margin-bottom: -10px;
+  margin-left: 25%;
   font-size: 2vw;
 }
+
 .bloodgroup select{
   margin-right: .5rem;
   background-color: transparent;
   border: .15rem solid black;
-  border-radius: 25px;
+  border-radius: 5px;
   width: 100%;
   height: 2rem;
   margin: 1rem;
@@ -624,7 +638,9 @@ hr{
   outline: inherit;
 }
 .bloodgroup input{
-  width: 70%;
+  width: 80%;
+  margin-left: -7%;
+  border-radius:5px !important;
 }
 #gotologin{
   background-color: transparent;
@@ -656,7 +672,7 @@ hr{
   }
   .signup #welcomeblock h2{
       font-size: 5rem;
-      font-weight: lighter;
+      font-weight: bold;
       margin: 0;
       padding: 0;
   }
@@ -687,7 +703,7 @@ hr{
   justify-content: center;
   height: 100%;
   background-color: #daecf3;
-  height:100vh;
+  
 }
 .donate div.progress{
   background-color: lightgray;
@@ -837,7 +853,7 @@ div.point{
 
 
 }
-.start{
+.start1{
     display: grid;
     align-items: center;
     background-color: #daecf3;
@@ -856,13 +872,20 @@ div.point{
 
 }
 .end{
-    background-color: #daecf3;
-    border-radius: 0 0 25px 25px;
     width: 80%;
-    height: 40px;
-    text-align: center;
+    margin: 0% 10% 5% 10%;
+    font-size: 1.25rem;
 }
+.recentSearchSelect{
+    width: 30%;
+    border-radius: 25px;
+    background-color: #fe424d;
+    border: none;
+    color: white;
+    height: 40px;
+    font-size: 1.5rem;
 
+}
 .entry2 select,.entry2 #sub{
     height: 40px;
     border: 3px solid black;
@@ -881,6 +904,26 @@ div.point{
     margin-top: 15px;
 
 }
+div.end h2{
+    text-align: center;
+}
+.recentSearch div{
+    display: grid;
+    grid-template-columns: .4fr 1fr;
+
+    border: 2px solid black;
+    padding: 5px;
+    height: 150px;
+
+}
+.recentSearch img{
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+
+
+}
+
 @media screen and (max-width:600px){
   .donate{
       display: grid;
