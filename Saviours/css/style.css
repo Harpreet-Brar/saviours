@@ -15,26 +15,25 @@ body{
 
 }
 main{
-  background-color: white;
-  width: 80%;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  width: 100%;
+}
+@media only screen and (min-width: 1200px){
 
+  main{
+    background-color: white;
+    width: 80%;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+
+  }
 }
 a{
   text-decoration: none;
   color: white;
 }
 
-button#signup_button{
-    height: 30px;
-    width: 100%;
-    background-color: white;
-    color: #fe424d;
-    border: 2px solid #fe424d;
-    border-radius: 25px;
-    font-size: 1rem;
-
+button{
+    outline: inherit;
 }
 
 img{
@@ -348,7 +347,11 @@ img{
 
 }
 
-
+/* data chart ==========================*/
+canvas#myChart{
+    max-width: 100%;
+    height: 40vh;
+}
 /* intr0duction text below the data chart */
 .intro{
     display: grid;
@@ -367,7 +370,7 @@ img{
     margin-bottom: .25rem;
 }
 hr{
-    width: 100%;
+    width: 80%;
     margin-bottom: 1rem;
 }
 .intro button{
@@ -396,6 +399,10 @@ hr{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
+  #myChart
+  {
+      height: 30vh;
+  }
 
 }
 
@@ -409,7 +416,7 @@ hr{
   grid-template-columns: 1fr;
   align-items: center;
   background-color: #daecf3;
-  height:100vh;
+  height: 91.7vh;
 }
 .login #welcomeblock{
   display: none;
@@ -499,16 +506,6 @@ hr{
     justify-content: center;
     justify-items: center;
 }
- button#login_button1{
-    background-color: white;
-    color:#fe424d;
-    font-size: 1rem;
-    border:2px solid #fe424d;
-    border-radius: 25px;
-    text-align: center;
-    height:30px;
-    width:100%;
-}
 .signup_button a{
   display: grid;
   border: 2px solid #fe424d;
@@ -521,15 +518,13 @@ hr{
   border-radius: 25px;
   margin-top: 10px;
 }
-@media screen and (min-width:600px){
+@media screen and (min-width:800px){
   .login {
     display: grid;
     grid-template-columns: 60% 40%;
     height: 100%;
     background-color: white;
-
   }
-  
   .login #welcomeblock{
     display: grid;
     justify-items: center;
@@ -538,7 +533,6 @@ hr{
     height: 100%;
     padding-bottom: 3rem;
     background-color: #daecf3;
-    padding-left: 2rem;
   }
 }
 /*=======================================================================*/
@@ -553,7 +547,6 @@ hr{
   align-content: center;
   justify-content: center;
   height: 100%;
-  width: 100%;
   background-color: #daecf3;
 }
 .signup #welcomeblock{
@@ -641,7 +634,7 @@ button#addbtnn.sign-button{
   width: 80%;
   margin-top: -10px;
   margin-bottom: -10px;
-  margin-left: 26%;
+  margin-left: 25%;
   font-size: 2vw;
 }
 
@@ -667,10 +660,10 @@ button#addbtnn.sign-button{
   color: blue;
 }
 
-@media screen and (min-width:600px){
+@media screen and (min-width:800px){
   .signup {
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 6fr 4fr;
     height: 100%;
     background-color: white;
   }
@@ -681,11 +674,11 @@ button#addbtnn.sign-button{
     align-items: center;
     align-content: center;
     width: 100%;
-    height: 100%!important;
+    height: 100%;
     background-color: #daecf3;
     text-align: center;
     font-family: fantasy;
-
+    padding-bottom: 20rem;
     position: sticky;
     top: 0;
   }
@@ -724,14 +717,6 @@ button#addbtnn.sign-button{
   background-color: #daecf3;
 
 }
-ul.centre_list{
-    width: 100%;
-    display: grid;
-    justify-content: center;
-}
-.recentSearch p{
-    margin: 20px;
-}
 .donate div.progress{
   background-color: lightgray;
 }
@@ -743,9 +728,8 @@ ul.centre_list{
   justify-content: center;
   align-items: center;
   height: 100%;
-  background-color: lightblue;
+  background-color: #1aa6B7;
   padding: 20px;
-
 
 }
 
@@ -900,7 +884,8 @@ div.point{
 
 }
 .end{
-
+    width: 80%;
+    margin: 0% 10% 5% 10%;
     font-size: 1.25rem;
 }
 .recentSearchSelect{
@@ -1040,7 +1025,6 @@ article{
 }
 article:nth-child(odd){
   background-color: #daecf3;
-  margin: 15px ;
 }
 
 article .img{
@@ -1048,16 +1032,13 @@ article .img{
   width: 100%;
   height: 150px;
   display: block;
-
 }
 .quote{
   padding: 1rem;
   background-color: #daecf3;
   text-align: center;
   font-size: 3vw;
-  width: 96%;
-  margin: 15px;
-  font-weight: bold;
+  width: 100%;
 }
 article p {
   padding: .5rem;
@@ -1118,49 +1099,6 @@ article p {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-
-}
-main.about div.heading h1{
-    margin: 40px;
-    font-size: 3rem;
-}
-.whyWe{
-    display: grid;
-    grid-template-columns: .5fr 1fr;
-    background-color: lightblue;
-    font-size: 1.25rem;
-    font-family: serif;
-    min-height: 250px;
-
-}
-.whyWe img{
-    height: 100%;
-    width: 100%;
-}
-.whyWe div{
-    margin: 0 20px 10px 20px;
-
-
-}
-
-.Contact {
-    margin: 5% 10% 5% 10%;
-
-}
-.message textarea{
-    border: 2px solid black;
-    width: 100%;
-
-}
-.submit{
-    height: 40px;
-    width:8rem;
-    background-color: white;
-    color: #fe424d;
-    border: 2px solid #fe424d;
-    border-radius: 25px;
-    margin-top: 20px;
-    font-size: 1.25rem;
 }
 .team hr{
   width: 100%;
@@ -1168,22 +1106,22 @@ main.about div.heading h1{
 }
 .team span div img{
 
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   margin: 0;
 }
 .team div{
   margin: 1rem;
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   position: relative;
 }
 .team div p{
   display: none;
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   margin: 0;
   position: absolute;
@@ -1202,14 +1140,6 @@ main.about div.heading h1{
   font-size: 12px;
 }
 
-@media screen and (max-width:600px){
-    .whyWe{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        height: auto;
-    }
-}
 
 
 
@@ -1230,26 +1160,6 @@ main.about div.heading h1{
   flex-grow: 1;
 }
 
-/*======================================================================================*/
-/*================================== ELIGIBILITY PAGE ================================*/
-/*======================================================================================*/
-
-h1{
-    text-align: center;
-    color:#fe424d;
-    margin: 15px;
-    font-family: sans-serif;
-    font-weight: bold;
-}
- hr{
-    height: 3px;
-    background-color: black;
-
-}
-main.eligible p{
-    font-size: 1.75rem;
-    margin: 20px;
-}
 
 /*======================================================================================*/
 /*========================================= END OF FILE ================================*/

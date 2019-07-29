@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
     <title>SAVIOURS</title>
-    <script src="js/Chart.js"></script>
 </head>
 <body>
     <header class="header" style="text-align:center">
@@ -59,29 +59,26 @@
         </div>
         <div class="services">
             <span>
-                <a href="pages/donate.html">
-                    <img src="images/Contacts.png"></a>
-                <caption>Donors Near You </caption>
+                <img src="images/Contacts.png">
+                <caption>Donors Near You</caption>
                 <p>You can locate donors near you</p>
             </span>
             <span>
-                <a href="index.html">
-                <img src="images/help.png"></a>
+                <img src="images/help.png">
                 <caption>Why To Help?</caption>
                 <p>Track the lives we can save by donating blood</p>
             </span>
             <span>
-                <a href="pages/donate.html">
-                <img src="images/appointments.png"></a>
+                <img src="images/appointments.png">
                 <caption>Appointments</caption>
                 <p>Make Appointments in simple steps</p>
             </span>
         </div>
 
-<hr>
+
 
         <div class="indexlinechart">
-            <canvas id="myChart" width="300" height="100"></canvas>
+            <canvas id="myChart"></canvas>
         </div>
             <div class="intro">
                 <h2>Our Services</h2>
@@ -103,7 +100,6 @@
                     </p>
                     <img src="images/isyou.jpg" alt="smiling-little-girl-picture">
                 </div>
-
                 <p>Click on the button below to book your appointmnets,and check in directly to the blood bank.</p>
                 <a href="pages/login.html"><button type="button" name="button">Book Now</button></a>
             </div>

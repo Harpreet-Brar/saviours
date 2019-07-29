@@ -27,7 +27,7 @@ rect:hover {  fill:blue; }
     vertical-align:bottom;
 }
 .legendFreq, .legendPerc{
-    align:right;
+    align-content:right;
     width:50px;
 }
 #welcomeblock #dashboard{
@@ -37,11 +37,12 @@ rect:hover {  fill:blue; }
     justify-items: center;
     align-items: center;
     text-align: center;
+    padding: 0;
+    margin: 0;
 }
 svg:first-child{
     grid-column: 1/span 2;
 }
 svg:nth-child(2){
-    margin-left: 7rem;
-    margin-right: 0;
+    margin: 0;
 }

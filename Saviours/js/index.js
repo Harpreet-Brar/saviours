@@ -39,69 +39,151 @@ window.setInterval(function(){
 
 
 
-        /*=================================================================================================*/
-        var ctx = document.getElementById('myChart').getContext('2d');
-  var chart = new Chart(ctx, {
-      // The type of chart we want to create
-      type: 'line',
+        /*==================================================================================*/
+        /*================================DATA VISUALIZATION CHART===========================*/
+        /*==================================================================================*/
+   var ctx = document.getElementById('myChart').getContext('2d');
+   var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+            label: 'A+',
+            data: [0,14,25,31,42,52,50],
 
-      // The data for our dataset
-      data: {
-          labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-          datasets: [{
-              label: 'Blood Group',
-              borderColor: 'rgb(255, 99, 132)',
+            backgroundColor: ["transparent"],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(255, 99, 132, 1)',
+                'rgba(255, 99, 132, 1)',
+                'rgba(255, 99, 132, 1)',
+                'rgba(255, 99, 132, 1)',
+                'rgba(255, 99, 132, 1)',
+                'rgba(255, 99, 132, 1)'
+            ],
+            borderWidth: 3
+        },
+        {
+            label: 'B+',
+            data: [0,9,23,27,34,48,52],
 
-          },
-          {
-              label: 'A+',
-              backgroundcolor:['rgb(218, 236, 243)'],
-              borderColor: 'rgb(244,164,96)',
-              data: [0,7,14,18,21,24,30],
+            backgroundColor: ["transparent"],
+            borderColor: [
+                'rgba(54, 162, 235, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(54, 162, 235, 1)'
+            ],
+            borderWidth: 3
+        },
+        {
+            label: 'AB+',
+            data: [0,12,21,24,31,46,51],
 
-          },
-          {
-              label: 'AB+',
-              backgroundcolor:['rgb(218, 236, 243)'],
-              borderColor: 'rgb(255, 99, 132)',
-              data: [0,9,17,21,27,38,41],
+            backgroundColor: ["transparent"],
+            borderColor: [
+                'rgba(255, 206, 86, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(255, 206, 86, 1)'
+            ],
+            borderWidth: 3
+        },
+        {
+            label: 'AB-',
+            data: [0,11,19,21,29,40,43],
+            backgroundColor: ["transparent"],
+            borderColor: [
+                'rgba(75, 192, 192, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(75, 192, 192, 1)'
+            ],
+            borderWidth: 3
+        },
+        {
+            label: 'A-',
+            data: [0,9,17,21,27,38,41],
+            backgroundColor: ["transparent"],
+            borderColor: [
+                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)'
+            ],
+            borderWidth: 3
+        },
+        {
+            label: 'B-',
+            data: [0,7,14,18,21,24,30],
+            backgroundColor: ["transparent"],
+            borderColor: [
+                'rgba(255, 159, 0, 1)',
+                'rgba(255, 159, 0, 1)',
+                'rgba(255, 159, 0, 1)',
+                'rgba(255, 159, 0, 1)',
+                'rgba(255, 159, 0, 1)',
+                'rgba(255, 159, 0, 1)',
+                'rgba(255, 159, 0, 1)'
+            ],
+            borderWidth: 3
+        },
+        {
+            label: 'O+',
+            data: [0,7,14,18,21,24,30],
+            backgroundColor: ["transparent"],
+            borderColor: [
+                'rgba(255, 159, 14, 1)',
+                'rgba(255, 159, 14, 1)',
+                'rgba(255, 159, 14, 1)',
+                'rgba(255, 159, 14, 1)',
+                'rgba(255, 159, 14, 1)',
+                'rgba(255, 159, 14, 1)',
+                'rgba(255, 159, 14, 1)'
+            ],
+            borderWidth: 3
+        },
+        {
+            label: 'O-',
+            data: [0,7,14,18,21,24,30],
+            backgroundColor: ["transparent"],
+            borderColor: [
+                'rgba(255, 159, 64, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 3
+        },
 
-          },
-          {
-              label: 'B+',
-              backgroundcolor:['rgb(218, 236, 243)'],
-              borderColor: 'rgb(218,165,32)',
-              data: [0,11,19,21,29,40,43],
 
-          },
-          {
-              label: 'AB-',
-              backgroundcolor:['rgb(218, 236, 243)'],
-              borderColor: 'rgb(199,21,133)',
-              data: [0,12,21,24,31,46,51],
-
-          },
-          {
-              label: 'O+',
-              backgroundcolor:['rgb(218, 236, 243)'],
-              borderColor: 'rgb(50, 99, 132)',
-              data: [0,9,23,27,34,48,52],
-
-          },
-          {
-              label: 'O-',
-              backgroundcolor:['rgb(218, 236, 243)'],
-              borderColor: 'rgb(165,42,42)',
-              data: [0,14,25,31,42,52,50],
-
-          }
-      ]
-      },
-
-      // Configuration options go here
-      options: {}
-  });
-
+    ]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
 
 
 

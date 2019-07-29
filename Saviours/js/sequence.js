@@ -14,12 +14,12 @@ function dashboard(id, fData){
 
         //create svg for histogram.
         var hGsvg = d3.select(id).append("svg")
-            .attr("width", "100%")
+            .attr("width", "90%")
             .attr("height", hGDim.h + hGDim.t + hGDim.b).append("g")
             .attr("transform", "translate(" + hGDim.l + "," + hGDim.t + ")");
 
         // create function for x-axis mapping.
-        var x = d3.scale.ordinal().rangeRoundBands([0, hGDim.w], 0.1)
+        var x = d3.scale.ordinal().rangeRoundBands([0, 450], 0.1)
                 .domain(fD.map(function(d) { return d[0]; }));
 
         // Add x-axis to the histogram svg.
