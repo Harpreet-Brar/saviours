@@ -274,7 +274,7 @@ function step2(x){
 
     if(x.target.id=='sub'){
         $('.centre_list').empty();
-        $('.centre_list').append("<h1 style='text-align:center'>Thanks </h1><br><h3>You Will Recieve Confirmation Email</h3");
+        $('.centre_list').append("<h1 style='text-align:center'>Thanks </h1><br><h3> Confirmation Email Sent</h3");
         document.getElementById('bar').className="bar5";
 
     }
