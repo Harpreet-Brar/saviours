@@ -254,7 +254,7 @@ function step2(x){
     function step3(x){
         var centre=$('#selection').val();
         $('.centre_list').empty();
-        $('.centre_list').append('<div class="entry"><p>Centre '+centre+'</p><img src="" alt="PHOTO OF CENTRE"><button class="select" id="select">Select</button><a href="https://www.google.com/maps/place/Langara/@49.2245834,-123.1108307,17z/data=!3m1!4b1!4m5!3m4!1s0x5486746f412563f7:0x36606d221509fdfe!8m2!3d49.2245834!4d-123.1086421" target="_blank"><button>Directions</button></a></div>');
+        $('.centre_list').append('<div class="entry"><p>Centre '+centre+'</p><img src="../images/map.jpg" alt="PHOTO OF CENTRE"><button class="select" id="select">Select</button><a href="https://www.google.com/maps/place/Langara/@49.2245834,-123.1108307,17z/data=!3m1!4b1!4m5!3m4!1s0x5486746f412563f7:0x36606d221509fdfe!8m2!3d49.2245834!4d-123.1086421" target="_blank"><button>Directions</button></a></div>');
         document.getElementById('bar').className="bar3";
     }
 
@@ -268,13 +268,13 @@ function step2(x){
             const dropdown = document.getElementById("selection");
             dropdown.className="hide";
     $('.centre_list').empty();
-    $('.centre_list').append('<div class="entry2"><input type="date" id="date"><select><option>Available time slots</option><option>12:00</option><option>14:00</option><option>16:00</option><option>20:00</option></select><button id="sub">Submit</button></div>');
+    $('.centre_list').append('<div class="entry2"><input type="date" id="date"><select><option>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAvailable time slots</option><option>09:00</option><option>11:00</option><option>13:00</option><option>15:00</option></select><button id="sub">Submit</button></div>');
     document.getElementById('bar').className="bar4";
     }
 
     if(x.target.id=='sub'){
         $('.centre_list').empty();
-        $('.centre_list').append("<h1 style='text-align:center'>Thanks </h1><br><h3>You Will Recieve Confirmation Email</h3");
+        $('.centre_list').append("<h2 style='text-align:center'>Thanks A Lot</h2><br><h3>E-mail Confirmation Sent.</h3");
         document.getElementById('bar').className="bar5";
 
     }

@@ -3,7 +3,8 @@
 }
 
 body{
-    font-family: Verdana, sans-serif; margin:0;
+    font-family: sans-serif;
+    margin:0;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -684,7 +685,7 @@ button#addbtnn.sign-button{
     height: 100%!important;
     background-color: #daecf3;
     text-align: center;
-    font-family: fantasy;
+    font-family:  sans-serif;
 
     position: sticky;
     top: 0;
@@ -745,7 +746,7 @@ button#login_button1{
   justify-content: center;
   align-items: center;
   height: 100%;
-  background-color: #1aa6B7;
+  background-color: lightblue;
   padding: 20px;
 
 }
@@ -833,7 +834,30 @@ div.point{
     background-color: #fe424d;
     border-radius: 15px;
 }
-
+.indexText{
+    font-size: 2rem;
+    margin-left: 5rem;
+    margin-top: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+ .indexlinechart{
+     display: none;
+ }
+ div.intro p{
+     font-size: 2rem;
+     text-align: left;
+     margin: 10%;
+     margin-bottom: 10px;
+     margin-top: 0;
+     font-family: sans-serif;
+     font-weight: lighter;
+ }
+ div.is-this-you p{
+     font-weight: bold;
+     font-style: italic;
+     font-size: 2rem;
+ }
 .loc_search{
       background-color: transparent;
       border: 3px solid #fe424d;
@@ -854,10 +878,23 @@ div.point{
     display: grid;
     grid-template-columns: 1fr 1fr;
     border: 3px solid black;
-    width: 25rem;
+    width: 90%;
     text-align: center;
     padding: 2rem;
     margin: .5rem;
+    height: 400px;
+}
+
+
+div.entry img{
+    margin:10px;
+}
+div.entry{
+    font-size: 1.5rem;
+    margin: 10px;
+}
+.recentSearch p{
+    margin-left: 15%;
 }
 .entry2{
     display: grid;
@@ -938,7 +975,7 @@ div.end h2{
 }
 .recentSearch div{
     display: grid;
-    grid-template-columns: .4fr 1fr;
+    grid-template-columns: 1fr 1fr;
 
     border: 2px solid black;
     padding: 5px;
@@ -946,9 +983,9 @@ div.end h2{
 
 }
 .recentSearch img{
-    width: 120px;
-    height: 120px;
-    margin: 10px;
+    width: 250px;
+    height: 130px;
+    margin: 2px;
 
 
 }
@@ -1131,7 +1168,7 @@ main.about div.heading h1{
     grid-template-columns: .5fr 1fr;
     background-color: lightblue;
     font-size: 1.25rem;
-    font-family: serif;
+    font-family:  sans-serif;
     min-height: 250px;
 
 }
@@ -1237,11 +1274,17 @@ main.about div.heading h1{
 /*================================== ELIGIBLE PAGE ================================*/
 /*======================================================================================*/
 
+main.eligible{
+    height: 100vh;
+}
+main.eligible p,main.eligible h1{
+    margin-top: 7%!important;
+}
 h1{
     text-align: center;
     color:#fe424d;
     margin: 15px;
-    font-family: sans-serif;
+    font-family:  sans-serif;
     font-weight: bold;
 }
  hr{
