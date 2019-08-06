@@ -1,4 +1,6 @@
-
+let MA,MAA,MB,MBB,MO,MOO;
+let FA,FAA,FB,FBB,FO,FOO;
+let OA,OAA,OB,OBB,OO,OOO;
 function dashboard(id, fData){
     var barColor = 'steelblue';
     function segColor(c){ return {MALE:"#807dba", OTHERS:"#e08214",FEMALE:"#41ab5d"}[c]; }
@@ -196,15 +198,277 @@ function dashboard(id, fData){
         leg= legend(tF);  // create the legend.
 }
 
-var freqData=[
-{State:'A+',freq:{MALE:54, FEMALE:37, OTHERS:11}}
-,{State:'B+',freq:{MALE:45, FEMALE:52, OTHERS:14}}
-,{State:'AB+',freq:{MALE:37, FEMALE:44, OTHERS:12}}
-,{State:'AB-',freq:{MALE:41, FEMALE:31, OTHERS:9}}
-,{State:'A-',freq:{MALE:52, FEMALE:25, OTHERS:5}}
-,{State:'B-',freq:{MALE:27, FEMALE:31, OTHERS:15}}
-,{State:'O+',freq:{MALE:38, FEMALE:28, OTHERS:7}}
-,{State:'O-',freq:{MALE:29, FEMALE:35, OTHERS:3}}
-];
+fetch('http://UOME.braronline.wmdd.ca/maleA').then((res) => {
+    res.json().then((data) => {
+        if(data.err) {
+            console.log(err);
+        } else {
+            MA=data;
+        }
+    })
+})
 
+fetch('http://UOME.braronline.wmdd.ca/maleAA').then((res) => {
+    res.json().then((data) => {
+        if(data.err) {
+            console.log(err);
+        } else {
+           MAA=data;
+        }
+    })
+})
+
+fetch('http://UOME.braronline.wmdd.ca/maleB').then((res) => {
+    res.json().then((data) => {
+        if(data.err) {
+            console.log(err);
+        } else {
+           MB=data;
+        }
+    })
+})
+
+fetch('http://UOME.braronline.wmdd.ca/maleBB').then((res) => {
+    res.json().then((data) => {
+        if(data.err) {
+            console.log(err);
+        } else {
+           MBB=data;
+        }
+    })
+})
+
+fetch('http://UOME.braronline.wmdd.ca/maleAB').then((res) => {
+    res.json().then((data) => {
+        if(data.err) {
+            console.log(err);
+        } else {
+           MAB=data;
+        }
+    })
+})
+
+fetch('http://UOME.braronline.wmdd.ca/maleABAB').then((res) => {
+    res.json().then((data) => {
+        if(data.err) {
+            console.log(err);
+        } else {
+           MABAB=data;
+        }
+    })
+})
+
+fetch('http://UOME.braronline.wmdd.ca/maleO').then((res) => {
+    res.json().then((data) => {
+        if(data.err) {
+            console.log(err);
+        } else {
+           MO=data;
+        }
+    })
+})
+
+fetch('http://UOME.braronline.wmdd.ca/maleOO').then((res) => {
+    res.json().then((data) => {
+        if(data.err) {
+            console.log(err);
+        } else {
+           MOO=data;
+        }
+    })
+})
+
+
+
+
+
+
+fetch('http://UOME.braronline.wmdd.ca/femaleA').then((res) => {
+    res.json().then((data) => {
+        if(data.err) {
+            console.log(err);
+        } else {
+            FA=data;
+        }
+    })
+})
+
+fetch('http://UOME.braronline.wmdd.ca/femaleAA').then((res) => {
+    res.json().then((data) => {
+        if(data.err) {
+            console.log(err);
+        } else {
+           FAA=data;
+           
+        }
+    })
+})
+
+fetch('http://UOME.braronline.wmdd.ca/femaleB').then((res) => {
+    res.json().then((data) => {
+        if(data.err) {
+            console.log(err);
+        } else {
+           FB=data;
+           
+        }
+    })
+})
+
+fetch('http://UOME.braronline.wmdd.ca/femaleBB').then((res) => {
+    res.json().then((data) => {
+        if(data.err) {
+            console.log(err);
+        } else {
+           FBB=data;
+           
+        }
+    })
+})
+
+fetch('http://UOME.braronline.wmdd.ca/femaleAB').then((res) => {
+    res.json().then((data) => {
+        if(data.err) {
+            console.log(err);
+        } else {
+           FAB=data;
+           
+        }
+    })
+})
+
+fetch('http://UOME.braronline.wmdd.ca/femaleABAB').then((res) => {
+    res.json().then((data) => {
+        if(data.err) {
+            console.log(err);
+        } else {
+           FABAB=data;
+           
+        }
+    })
+})
+
+fetch('http://UOME.braronline.wmdd.ca/femaleO').then((res) => {
+    res.json().then((data) => {
+        if(data.err) {
+            console.log(err);
+        } else {
+           FO=data;
+           
+        }
+    })
+})
+
+fetch('http://UOME.braronline.wmdd.ca/femaleOO').then((res) => {
+    res.json().then((data) => {
+        if(data.err) {
+            console.log(err);
+        } else {
+           FOO=data;
+           
+        }
+    })
+})
+
+
+
+fetch('http://UOME.braronline.wmdd.ca/otherA').then((res) => {
+    res.json().then((data) => {
+        if(data.err) {
+            console.log(err);
+        } else {
+            OA=data;
+        }
+    })
+})
+
+fetch('http://UOME.braronline.wmdd.ca/otherAA').then((res) => {
+    res.json().then((data) => {
+        if(data.err) {
+            console.log(err);
+        } else {
+           OAA=data;
+           
+        }
+    })
+})
+
+fetch('http://UOME.braronline.wmdd.ca/otherB').then((res) => {
+    res.json().then((data) => {
+        if(data.err) {
+            console.log(err);
+        } else {
+           OB=data;
+           
+        }
+    })
+})
+
+fetch('http://UOME.braronline.wmdd.ca/otherBB').then((res) => {
+    res.json().then((data) => {
+        if(data.err) {
+            console.log(err);
+        } else {
+           OBB=data;
+           
+        }
+    })
+})
+
+fetch('http://UOME.braronline.wmdd.ca/otherAB').then((res) => {
+    res.json().then((data) => {
+        if(data.err) {
+            console.log(err);
+        } else {
+           OAB=data;
+           
+        }
+    })
+})
+
+fetch('http://UOME.braronline.wmdd.ca/otherABAB').then((res) => {
+    res.json().then((data) => {
+        if(data.err) {
+            console.log(err);
+        } else {
+           OABAB=data;
+           
+        }
+    })
+})
+
+fetch('http://UOME.braronline.wmdd.ca/otherO').then((res) => {
+    res.json().then((data) => {
+        if(data.err) {
+            console.log(err);
+        } else {
+           OO=data;
+           
+        }
+    })
+})
+
+fetch('http://UOME.braronline.wmdd.ca/otherOO').then((res) => {
+    res.json().then((data) => {
+        if(data.err) {
+            console.log(err);
+        } else {
+           OOO=data;
+           
+        }
+    })
+})
+
+setTimeout(() => {
+var freqData=[
+{State:'A+',freq:{MALE:MA, FEMALE:FA, OTHERS:OA}}
+,{State:'B+',freq:{MALE:MB, FEMALE:FB, OTHERS:OB}}
+,{State:'AB+',freq:{MALE:MAB, FEMALE:FAB, OTHERS:OAB}}
+,{State:'AB-',freq:{MALE:MABAB, FEMALE:FABAB, OTHERS:OAB}}
+,{State:'A-',freq:{MALE:MAA, FEMALE:FAA, OTHERS:OAA}}
+,{State:'B-',freq:{MALE:MBB, FEMALE:FBB, OTHERS:OBB}}
+,{State:'O+',freq:{MALE:MO, FEMALE:FO, OTHERS:OO}}
+,{State:'O-',freq:{MALE:MOO, FEMALE:FOO, OTHERS:OOO}}
+];
 dashboard('#dashboard',freqData);
+}, 1000);

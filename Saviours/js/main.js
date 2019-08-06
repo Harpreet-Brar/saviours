@@ -12,6 +12,8 @@ firebase.initializeApp(config);
 //==================================login page =======================================
 //====================================================================================
 
+
+
 const body = document.body;
 const buttons = document.querySelectorAll('button.fa-bars');
 
@@ -30,6 +32,16 @@ firebase.auth().onAuthStateChanged(function(user) {
       }
 
   }
+  else{
+    if(pagename == "LOGIN"){
+        alert("already logged in");
+
+        var url = "../index.html";
+        $(location).attr("href", url);
+
+
+    }
+  }
 
 const login_button = document.querySelectorAll('#login_button');
 login_button.forEach(button=>button.addEventListener('click',login_funct));
@@ -42,7 +54,7 @@ function login_funct(){
     var loguser = $("#log_name").val();
     var logpass = $("#log_pass").val();
 
-    firebase.auth().signInWithEmailAndPassword(loguser, logpass).catch(function(error) {
+firebase.auth().signInWithEmailAndPassword(loguser, logpass).catch(function(error) {
   // Handle Errors here.
   var errorCode = error.code;
   var errorMessage = error.message;
@@ -268,13 +280,13 @@ function step2(x){
             const dropdown = document.getElementById("selection");
             dropdown.className="hide";
     $('.centre_list').empty();
-    $('.centre_list').append('<div class="entry2"><input type="date" id="date"><select><option>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAvailable time slots</option><option>09:00</option><option>11:00</option><option>13:00</option><option>15:00</option></select><button id="sub">Submit</button></div>');
+    $('.centre_list').append('<div class="entry2"><input type="date" id="date"><select><option>Available time slots</option><option>12:00</option><option>14:00</option><option>16:00</option><option>20:00</option></select><button id="sub">Submit</button></div>');
     document.getElementById('bar').className="bar4";
     }
 
     if(x.target.id=='sub'){
         $('.centre_list').empty();
-        $('.centre_list').append("<h2 style='text-align:center'>Thanks A Lot</h2><br><h3>E-mail Confirmation Sent.</h3");
+        $('.centre_list').append("<h1 style='text-align:center'>Thanks </h1><br><h3>You Will Recieve Confirmation Email</h3");
         document.getElementById('bar').className="bar5";
 
     }

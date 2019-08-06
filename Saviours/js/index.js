@@ -1,3 +1,43 @@
+var config = {
+    apiKey: "AIzaSyA_7yI1zJv8m02KV2JWRig4SUMfvRmEh8I",
+   authDomain: "saviours-b670c.firebaseapp.com",
+   databaseURL: "https://saviours-b670c.firebaseio.com",
+   projectId: "saviours-b670c",
+   storageBucket: "",
+   messagingSenderId: "631866391865",
+   appId: "1:631866391865:web:cfae7e9b73021796"
+};
+firebase.initializeApp(config);
+
+
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+        $(login_button).text("logout");
+        login_button.addEventListener('click',(e)=>{
+
+            
+            firebase.auth().signOut().then(function() {
+                // Sign-out successful.
+                document.location.href="pages/login.html";
+            }).catch(function(error) {
+                // An error happened.
+                alert("error! check your network");
+            });
+
+        });
+    }
+    else{
+
+        login_button.addEventListener('click',(e)=>{
+
+                document.location.href="pages/login.html";
+            
+        });
+
+    }
+});
+
+
 const body = document.body;
 const buttons = document.querySelectorAll('button.fa-bars');
 
