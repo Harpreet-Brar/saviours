@@ -22,14 +22,15 @@ signup.addEventListener('click', (e) => {
         postalCode : postal.value,
 };
 jsonPut = JSON.stringify(jsonPut);
-fetch(`http://UOME.braronline.wmdd.ca/signup`, { method: 'POST', headers: {'content-Type': 'application/json'},body: jsonPut}).then((res) => {
+fetch(`http://api.saviours.wmdd.ca/signup`, { method: 'POST', headers: {'content-Type': 'application/json'},body: jsonPut}).then((res) => {
 res.json().then((data) => {
 if(data.err) {
     console.log(err);
 } else {
-    
+
         }
 })
 })
 
-})
+});
+

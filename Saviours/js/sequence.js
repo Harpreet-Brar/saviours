@@ -1,3 +1,5 @@
+//chart references d3.js//
+
 let MA,MAA,MB,MBB,MO,MOO;
 let FA,FAA,FB,FBB,FO,FOO;
 let OA,OAA,OB,OBB,OO,OOO;
@@ -198,7 +200,7 @@ function dashboard(id, fData){
         leg= legend(tF);  // create the legend.
 }
 
-fetch('http://UOME.braronline.wmdd.ca/maleA').then((res) => {
+fetch('http://api.saviours.wmdd.ca/maleA').then((res) => {
     res.json().then((data) => {
         if(data.err) {
             console.log(err);
@@ -208,7 +210,7 @@ fetch('http://UOME.braronline.wmdd.ca/maleA').then((res) => {
     })
 })
 
-fetch('http://UOME.braronline.wmdd.ca/maleAA').then((res) => {
+fetch('http://api.saviours.wmdd.ca/maleAA').then((res) => {
     res.json().then((data) => {
         if(data.err) {
             console.log(err);
@@ -218,7 +220,7 @@ fetch('http://UOME.braronline.wmdd.ca/maleAA').then((res) => {
     })
 })
 
-fetch('http://UOME.braronline.wmdd.ca/maleB').then((res) => {
+fetch('http://api.saviours.wmdd.ca/maleB').then((res) => {
     res.json().then((data) => {
         if(data.err) {
             console.log(err);
@@ -228,7 +230,7 @@ fetch('http://UOME.braronline.wmdd.ca/maleB').then((res) => {
     })
 })
 
-fetch('http://UOME.braronline.wmdd.ca/maleBB').then((res) => {
+fetch('http://api.saviours.wmdd.ca/maleBB').then((res) => {
     res.json().then((data) => {
         if(data.err) {
             console.log(err);
@@ -238,7 +240,7 @@ fetch('http://UOME.braronline.wmdd.ca/maleBB').then((res) => {
     })
 })
 
-fetch('http://UOME.braronline.wmdd.ca/maleAB').then((res) => {
+fetch('http://api.saviours.wmdd.ca/maleAB').then((res) => {
     res.json().then((data) => {
         if(data.err) {
             console.log(err);
@@ -248,7 +250,7 @@ fetch('http://UOME.braronline.wmdd.ca/maleAB').then((res) => {
     })
 })
 
-fetch('http://UOME.braronline.wmdd.ca/maleABAB').then((res) => {
+fetch('http://api.saviours.wmdd.ca/maleABAB').then((res) => {
     res.json().then((data) => {
         if(data.err) {
             console.log(err);
@@ -258,7 +260,7 @@ fetch('http://UOME.braronline.wmdd.ca/maleABAB').then((res) => {
     })
 })
 
-fetch('http://UOME.braronline.wmdd.ca/maleO').then((res) => {
+fetch('http://api.saviours.wmdd.ca/maleO').then((res) => {
     res.json().then((data) => {
         if(data.err) {
             console.log(err);
@@ -268,7 +270,7 @@ fetch('http://UOME.braronline.wmdd.ca/maleO').then((res) => {
     })
 })
 
-fetch('http://UOME.braronline.wmdd.ca/maleOO').then((res) => {
+fetch('http://api.saviours.wmdd.ca/maleOO').then((res) => {
     res.json().then((data) => {
         if(data.err) {
             console.log(err);
@@ -283,7 +285,7 @@ fetch('http://UOME.braronline.wmdd.ca/maleOO').then((res) => {
 
 
 
-fetch('http://UOME.braronline.wmdd.ca/femaleA').then((res) => {
+fetch('http://api.saviours.wmdd.ca/femaleA').then((res) => {
     res.json().then((data) => {
         if(data.err) {
             console.log(err);
@@ -293,86 +295,86 @@ fetch('http://UOME.braronline.wmdd.ca/femaleA').then((res) => {
     })
 })
 
-fetch('http://UOME.braronline.wmdd.ca/femaleAA').then((res) => {
+fetch('http://api.saviours.wmdd.ca/femaleAA').then((res) => {
     res.json().then((data) => {
         if(data.err) {
             console.log(err);
         } else {
            FAA=data;
-           
+
         }
     })
 })
 
-fetch('http://UOME.braronline.wmdd.ca/femaleB').then((res) => {
+fetch('http://api.saviours.wmdd.ca/femaleB').then((res) => {
     res.json().then((data) => {
         if(data.err) {
             console.log(err);
         } else {
            FB=data;
-           
+
         }
     })
 })
 
-fetch('http://UOME.braronline.wmdd.ca/femaleBB').then((res) => {
+fetch('http://api.saviours.wmdd.ca/femaleBB').then((res) => {
     res.json().then((data) => {
         if(data.err) {
             console.log(err);
         } else {
            FBB=data;
-           
+
         }
     })
 })
 
-fetch('http://UOME.braronline.wmdd.ca/femaleAB').then((res) => {
+fetch('http://api.saviours.wmdd.ca/femaleAB').then((res) => {
     res.json().then((data) => {
         if(data.err) {
             console.log(err);
         } else {
            FAB=data;
-           
+
         }
     })
 })
 
-fetch('http://UOME.braronline.wmdd.ca/femaleABAB').then((res) => {
+fetch('http://api.saviours.wmdd.ca/femaleABAB').then((res) => {
     res.json().then((data) => {
         if(data.err) {
             console.log(err);
         } else {
            FABAB=data;
-           
+
         }
     })
 })
 
-fetch('http://UOME.braronline.wmdd.ca/femaleO').then((res) => {
+fetch('http://api.saviours.wmdd.ca/femaleO').then((res) => {
     res.json().then((data) => {
         if(data.err) {
             console.log(err);
         } else {
            FO=data;
-           
+
         }
     })
 })
 
-fetch('http://UOME.braronline.wmdd.ca/femaleOO').then((res) => {
+fetch('http://api.saviours.wmdd.ca/femaleOO').then((res) => {
     res.json().then((data) => {
         if(data.err) {
             console.log(err);
         } else {
            FOO=data;
-           
+
         }
     })
 })
 
 
 
-fetch('http://UOME.braronline.wmdd.ca/otherA').then((res) => {
+fetch('http://api.saviours.wmdd.ca/otherA').then((res) => {
     res.json().then((data) => {
         if(data.err) {
             console.log(err);
@@ -382,79 +384,79 @@ fetch('http://UOME.braronline.wmdd.ca/otherA').then((res) => {
     })
 })
 
-fetch('http://UOME.braronline.wmdd.ca/otherAA').then((res) => {
+fetch('http://api.saviours.wmdd.ca/otherAA').then((res) => {
     res.json().then((data) => {
         if(data.err) {
             console.log(err);
         } else {
            OAA=data;
-           
+
         }
     })
 })
 
-fetch('http://UOME.braronline.wmdd.ca/otherB').then((res) => {
+fetch('http://api.saviours.wmdd.ca/otherB').then((res) => {
     res.json().then((data) => {
         if(data.err) {
             console.log(err);
         } else {
            OB=data;
-           
+
         }
     })
 })
 
-fetch('http://UOME.braronline.wmdd.ca/otherBB').then((res) => {
+fetch('http://api.saviours.wmdd.ca/otherBB').then((res) => {
     res.json().then((data) => {
         if(data.err) {
             console.log(err);
         } else {
            OBB=data;
-           
+
         }
     })
 })
 
-fetch('http://UOME.braronline.wmdd.ca/otherAB').then((res) => {
+fetch('http://api.saviours.wmdd.ca/otherAB').then((res) => {
     res.json().then((data) => {
         if(data.err) {
             console.log(err);
         } else {
            OAB=data;
-           
+
         }
     })
 })
 
-fetch('http://UOME.braronline.wmdd.ca/otherABAB').then((res) => {
+fetch('http://api.saviours.wmdd.ca/otherABAB').then((res) => {
     res.json().then((data) => {
         if(data.err) {
             console.log(err);
         } else {
            OABAB=data;
-           
+
         }
     })
 })
 
-fetch('http://UOME.braronline.wmdd.ca/otherO').then((res) => {
+fetch('http://api.saviours.wmdd.ca/otherO').then((res) => {
     res.json().then((data) => {
         if(data.err) {
             console.log(err);
         } else {
            OO=data;
-           
+
         }
     })
 })
 
-fetch('http://UOME.braronline.wmdd.ca/otherOO').then((res) => {
+fetch('http://api.saviours.wmdd.ca/otherOO').then((res) => {
     res.json().then((data) => {
         if(data.err) {
             console.log(err);
         } else {
            OOO=data;
-           
+
         }
     })
 })
